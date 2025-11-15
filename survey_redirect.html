@@ -4,25 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Спасибо за обратную связь!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
     <script>
-        // Пытаемся открыть deep link
-        window.location.href = "simplepdfreader://survey/completed";
-        
-        // Если через 2 секунды не произошел переход, показываем сообщение
-        setTimeout(function() {
-            document.getElementById("fallback").style.display = "block";
-        }, 2000);
+        // Показываем содержимое сразу
+        window.onload = function() {
+            // Пытаемся открыть deep link через небольшую задержку
+            setTimeout(function() {
+                window.location.href = "simplepdfreader://survey/completed";
+            }, 500);
+            
+            // Если через 3 секунды не произошел переход, показываем кнопку
+            setTimeout(function() {
+                document.getElementById("fallback").style.display = "block";
+            }, 3000);
+        };
     </script>
 </head>
-<body style="font-family: Arial, sans-serif; text-align: center; padding: 50px;">
-    <h1>Спасибо за обратную связь!</h1>
-    <p>Ваше сообщение отправлено.</p>
-    <div id="fallback" style="display: none; margin-top: 20px;">
-        <p>Если приложение не открылось автоматически, нажмите кнопку ниже:</p>
-        <a href="simplepdfreader://survey/completed" 
-           style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; margin-top: 10px;">
-            Вернуться в приложение
-        </a>
+<body>
+    <div class="container">
+        <h1>Спасибо за обратную связь!</h1>
+        <p>Ваше сообщение отправлено.</p>
+        <p style="color: #666; font-size: 14px; margin-top: 20px;">Открываем приложение...</p>
+        <div id="fallback" style="display: none; margin-top: 20px;">
+            <p>Если приложение не открылось автоматически, нажмите кнопку ниже:</p>
+            <a href="simplepdfreader://survey/completed" class="button">
+                Вернуться в приложение
+            </a>
+        </div>
     </div>
 </body>
 </html>
