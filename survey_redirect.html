@@ -33,45 +33,16 @@
             background-color: #0056b3;
         }
     </style>
-    <script>
-        function openApp() {
-            var deepLink = "simplepdfreader://survey/completed";
-            
-            // Пробуем открыть через создание скрытой ссылки и клик
-            var link = document.createElement('a');
-            link.href = deepLink;
-            link.style.display = 'none';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            
-            // Также пробуем через window.location
-            setTimeout(function() {
-                window.location.href = deepLink;
-            }, 100);
-            
-            // Показываем кнопку через 1 секунду
-            setTimeout(function() {
-                document.getElementById("fallback").style.display = "block";
-            }, 1000);
-        }
-        
-        window.onload = function() {
-            setTimeout(openApp, 500);
-        };
-    </script>
 </head>
 <body>
     <div class="container">
         <h1>Спасибо за обратную связь!</h1>
         <p>Ваше сообщение отправлено.</p>
-        <p style="color: #666; font-size: 14px; margin-top: 20px;">Открываем приложение...</p>
-        <div id="fallback" style="display: none; margin-top: 20px;">
-            <p>Если приложение не открылось автоматически, нажмите кнопку ниже:</p>
-            <a href="simplepdfreader://survey/completed" class="button" onclick="openApp(); return false;">
+        <p style="margin-top: 30px;">
+            <a href="simplepdfreader://survey/completed" class="button">
                 Вернуться в приложение
             </a>
-        </div>
+        </p>
     </div>
 </body>
 </html>
