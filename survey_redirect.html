@@ -35,19 +35,18 @@
     </style>
     <script>
         function openApp() {
-            // Пробуем открыть deep link
             var deepLink = "simplepdfreader://survey/completed";
             
-            // Создаем скрытый iframe для попытки открытия
-            var iframe = document.createElement("iframe");
-            iframe.style.display = "none";
-            iframe.src = deepLink;
-            document.body.appendChild(iframe);
+            // Пробуем через Intent URL (для Android)
+            var intentUrl = "intent://survey/completed#Intent;scheme=simplepdfreader;package=ru.ymike.simplepdfreader;end";
             
-            // Также пробуем через window.location
+            // Сначала пробуем Intent URL
+            window.location.href = intentUrl;
+            
+            // Если не сработало, пробуем обычный deep link
             setTimeout(function() {
                 window.location.href = deepLink;
-            }, 100);
+            }, 500);
             
             // Показываем кнопку через 1 секунду
             setTimeout(function() {
@@ -55,7 +54,6 @@
             }, 1000);
         }
         
-        // Автоматически пытаемся открыть при загрузке страницы
         window.onload = function() {
             setTimeout(openApp, 500);
         };
@@ -68,7 +66,9 @@
         <p style="color: #666; font-size: 14px; margin-top: 20px;">Открываем приложение...</p>
         <div id="fallback" style="display: none; margin-top: 20px;">
             <p>Если приложение не открылось автоматически, нажмите кнопку ниже:</p>
-            <a href="simplepdfreader://survey/completed" class="button" onclick="openApp(); return false;">
+            <a href="intent://survey/completed#Intent;scheme=simplepdfreader;package=ru.ymike.simplepdfreader;end" 
+               class="button" 
+               onclick="openApp(); return false;">
                 Вернуться в приложение
             </a>
         </div>
