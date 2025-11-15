@@ -27,23 +27,37 @@
             text-decoration: none;
             border-radius: 5px;
             margin-top: 20px;
+            cursor: pointer;
         }
         .button:hover {
             background-color: #0056b3;
         }
     </style>
     <script>
-        // Показываем содержимое сразу
-        window.onload = function() {
-            // Пытаемся открыть deep link через небольшую задержку
-            setTimeout(function() {
-                window.location.href = "simplepdfreader://survey/completed";
-            }, 500);
+        function openApp() {
+            // Пробуем открыть deep link
+            var deepLink = "simplepdfreader://survey/completed";
             
-            // Если через 3 секунды не произошел переход, показываем кнопку
+            // Создаем скрытый iframe для попытки открытия
+            var iframe = document.createElement("iframe");
+            iframe.style.display = "none";
+            iframe.src = deepLink;
+            document.body.appendChild(iframe);
+            
+            // Также пробуем через window.location
+            setTimeout(function() {
+                window.location.href = deepLink;
+            }, 100);
+            
+            // Показываем кнопку через 1 секунду
             setTimeout(function() {
                 document.getElementById("fallback").style.display = "block";
-            }, 3000);
+            }, 1000);
+        }
+        
+        // Автоматически пытаемся открыть при загрузке страницы
+        window.onload = function() {
+            setTimeout(openApp, 500);
         };
     </script>
 </head>
@@ -54,7 +68,7 @@
         <p style="color: #666; font-size: 14px; margin-top: 20px;">Открываем приложение...</p>
         <div id="fallback" style="display: none; margin-top: 20px;">
             <p>Если приложение не открылось автоматически, нажмите кнопку ниже:</p>
-            <a href="simplepdfreader://survey/completed" class="button">
+            <a href="simplepdfreader://survey/completed" class="button" onclick="openApp(); return false;">
                 Вернуться в приложение
             </a>
         </div>
