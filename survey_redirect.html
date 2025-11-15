@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спасибо за обратную связь!</title>
+    <script>
+        // Пытаемся открыть deep link
+        window.location.href = "simplepdfreader://survey/completed";
+        
+        // Если через 2 секунды не произошел переход, показываем сообщение
+        setTimeout(function() {
+            document.getElementById("fallback").style.display = "block";
+        }, 2000);
+    </script>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; padding: 50px;">
+    <h1>Спасибо за обратную связь!</h1>
+    <p>Ваше сообщение отправлено.</p>
+    <div id="fallback" style="display: none; margin-top: 20px;">
+        <p>Если приложение не открылось автоматически, нажмите кнопку ниже:</p>
+        <a href="simplepdfreader://survey/completed" 
+           style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; margin-top: 10px;">
+            Вернуться в приложение
+        </a>
+    </div>
+</body>
+</html>
+
