@@ -4,45 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Спасибо за обратную связь!</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-            background-color: #f5f5f5;
-        }
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            max-width: 500px;
-            margin: 0 auto;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .button {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-            cursor: pointer;
-        }
-        .button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <script>
+        // Используем Intent URL для автоматического открытия приложения
+        // Формат: intent://path#Intent;scheme=scheme;package=package;end
+        const intentUrl = "intent://survey/completed#Intent;scheme=simplepdfreader;package=ru.ymike.simplepdfreader;end";
+        
+        // Пытаемся открыть через Intent URL
+        window.location.href = intentUrl;
+        
+        // Если через 2 секунды не произошел переход, показываем сообщение с кнопкой
+        setTimeout(function() {
+            document.getElementById("fallback").style.display = "block";
+        }, 2000);
+    </script>
 </head>
-<body>
-    <div class="container">
-        <h1>Спасибо за обратную связь!</h1>
-        <p>Ваше сообщение отправлено.</p>
-        <p style="margin-top: 30px;">
-            <a href="simplepdfreader://survey/completed" class="button">
-                Вернуться в приложение
-            </a>
-        </p>
+<body style="font-family: Arial, sans-serif; text-align: center; padding: 50px;">
+    <h1>Спасибо за обратную связь!</h1>
+    <p>Ваше сообщение отправлено.</p>
+    <p style="color: #666; font-size: 14px;">Перенаправление в приложение...</p>
+    <div id="fallback" style="display: none; margin-top: 20px;">
+        <p>Если приложение не открылось автоматически, нажмите кнопку ниже:</p>
+        <a href="intent://survey/completed#Intent;scheme=simplepdfreader;package=ru.ymike.simplepdfreader;end" 
+           style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; margin-top: 10px;">
+            Вернуться в приложение
+        </a>
     </div>
 </body>
 </html>
