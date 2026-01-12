@@ -1,0 +1,176 @@
+<footer class="footer">
+  <div class="footer-content">
+    <!-- Левая колонка: О себе -->
+    <div class="footer-section footer-about">
+      <h3 class="footer-title">Михаил Яблоков</h3>
+      <p class="footer-text">
+        Эксперт по территориальной охране природы. 
+        Стратегии устойчивости, устойчивый туризм, социальные решения.
+      </p>
+    </div>
+    
+    <!-- Средняя колонка: Навигация -->
+    <div class="footer-section footer-nav">
+      <h4 class="footer-title">Направления</h4>
+      <ul class="footer-links">
+        <li><a href="{{ '/strategic/' | relative_url }}">Стратегии устойчивости</a></li>
+        <li><a href="{{ '/social/' | relative_url }}">Социальные решения</a></li>
+        <li><a href="{{ '/tourism/' | relative_url }}">Устойчивый туризм</a></li>
+        <li><a href="{{ '/digital/' | relative_url }}">Цифровые решения</a></li>
+        <li><a href="{{ '/education/' | relative_url }}">Обучение и развитие</a></li>
+      </ul>
+    </div>
+    
+    <!-- Правая колонка: Контакты -->
+    <div class="footer-section footer-contact">
+      <h4 class="footer-title">Контакты</h4>
+      <ul class="footer-links">
+        <li>
+          <a href="mailto:ymike@mail.ru" class="footer-email">ymike@mail.ru</a>
+        </li>
+        <li>
+          <a href="{{ '/pdfs/ruYablokovCV.pdf' | relative_url }}" class="footer-cv" download>
+            Скачать резюме (CV)
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Копирайт -->
+  <div class="footer-bottom">
+    <p class="footer-copyright">
+      &copy; {{ 'now' | date: "%Y" }} Михаил Яблоков. Все права защищены.
+    </p>
+    <p class="footer-built">
+      Разработано с использованием Jekyll и GitHub Pages
+    </p>
+  </div>
+</footer>
+
+<style>
+/* ============================================
+   FOOTER STYLES
+   ============================================ */
+
+.footer {
+  background-color: var(--color-hf);
+  color: var(--color-light-text);
+  padding: var(--spacing-xl) 0 var(--spacing-md);
+  margin-top: var(--spacing-xxl);
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.footer-title {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-add-acc);
+  margin-bottom: var(--spacing-sm);
+}
+
+.footer-text {
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  opacity: 0.85;
+  color: var(--color-light-text);
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.footer-links a {
+  color: var(--color-light-text);
+  font-size: var(--font-size-sm);
+  opacity: 0.85;
+  transition: opacity var(--transition-fast), color var(--transition-fast);
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  color: var(--color-add-acc);
+}
+
+.footer-email,
+.footer-cv {
+  font-weight: 600;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--spacing-md) var(--spacing-md) 0;
+  border-top: 1px solid rgba(254, 250, 224, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.footer-copyright,
+.footer-built {
+  font-size: var(--font-size-xs);
+  opacity: 0.7;
+  color: var(--color-light-text);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  .footer-about {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .footer {
+    padding: var(--spacing-lg) 0 var(--spacing-sm);
+    margin-top: var(--spacing-xl);
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .footer-about {
+    grid-column: 1;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--spacing-sm);
+  }
+}
+</style>

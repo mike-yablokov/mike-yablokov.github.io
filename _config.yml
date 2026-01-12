@@ -1,0 +1,47 @@
+# Конфигурация сайта
+title: "Михаил Яблоков"
+description: "Эксперт по территориальной охране природы: стратегии устойчивости, природный туризм, социальные решения"
+author: "Михаил Яблоков"
+
+# URL настройки
+url: "https://ymike.ru"
+baseurl: ""
+
+# Build настройки
+markdown: kramdown
+permalink: pretty  # Красивые URL без .html
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Коллекция для кейсов
+collections:
+  cases:
+    output: false  # Кейсы не генерируют отдельные страницы, только модальные окна
+    permalink: /cases/:name/
+
+# Exclude файлы от сборки
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - .jekyll-metadata
+  - plan.md
+  - README.md
+  - extracted_*.txt
+  - extract_docx.py
+  - контент/
+  - photo/
+
+# Настройки Markdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+# Настройки для GitHub Pages
+github: [metadata]
+

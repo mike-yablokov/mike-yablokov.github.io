@@ -1,0 +1,262 @@
+<header class="header">
+  <div class="header-content">
+    <!-- Логотип / Имя -->
+    <a href="{{ '/' | relative_url }}" class="logo">Михаил Яблоков</a>
+    
+    <!-- Навигация -->
+    <nav class="nav" aria-label="Основная навигация">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="{{ '/strategic/' | relative_url }}" class="nav-link">Стратегии</a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ '/social/' | relative_url }}" class="nav-link">Социальные решения</a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ '/tourism/' | relative_url }}" class="nav-link">Туризм</a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ '/digital/' | relative_url }}" class="nav-link">Цифровизация</a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ '/education/' | relative_url }}" class="nav-link">Обучение</a>
+        </li>
+      </ul>
+    </nav>
+    
+    <!-- Переключатель языков (пока неактивный) -->
+    <div class="lang-switcher">
+      <button class="lang-btn active" aria-label="Русская версия" aria-current="true">RU</button>
+      <button class="lang-btn" aria-label="English version" disabled>EN</button>
+    </div>
+    
+    <!-- Мобильная кнопка меню -->
+    <button class="mobile-menu-toggle" aria-label="Открыть меню" aria-expanded="false">
+      <span class="hamburger"></span>
+    </button>
+  </div>
+</header>
+
+<style>
+/* ============================================
+   HEADER STYLES
+   ============================================ */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+  background-color: var(--color-hf);
+  box-shadow: var(--shadow-sm);
+}
+
+.header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--spacing-sm) var(--spacing-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+}
+
+/* Logo */
+.logo {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  white-space: nowrap;
+}
+
+.logo:hover {
+  color: var(--color-add-acc);
+}
+
+/* Navigation */
+.nav {
+  flex: 1;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: var(--spacing-md);
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--color-light-text);
+  font-weight: 400;
+  font-size: var(--font-size-sm);
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity var(--transition-fast), color var(--transition-fast);
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  opacity: 1;
+  color: var(--color-add-acc);
+}
+
+.nav-link.active {
+  opacity: 1;
+  font-weight: 700;
+  color: var(--color-light-text);
+}
+
+/* Language Switcher */
+.lang-switcher {
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+.lang-btn {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  background-color: transparent;
+  color: var(--color-light-text);
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  opacity: 0.7;
+}
+
+.lang-btn.active {
+  background-color: var(--color-background);
+  color: var(--color-dark-text);
+  opacity: 1;
+}
+
+.lang-btn:hover:not(.active):not(:disabled) {
+  opacity: 1;
+  border-color: var(--color-add-acc);
+}
+
+.lang-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburger {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-light-text);
+  border-radius: 2px;
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-light-text);
+  border-radius: 2px;
+  transition: all var(--transition-fast);
+}
+
+.hamburger::before {
+  transform: translateY(-8px);
+}
+
+.hamburger::after {
+  transform: translateY(8px);
+}
+
+/* Mobile Menu Toggle Active State */
+.mobile-menu-toggle[aria-expanded="true"] .hamburger {
+  background-color: transparent;
+}
+
+.mobile-menu-toggle[aria-expanded="true"] .hamburger::before {
+  transform: rotate(45deg);
+}
+
+.mobile-menu-toggle[aria-expanded="true"] .hamburger::after {
+  transform: rotate(-45deg);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .nav-list {
+    gap: var(--spacing-sm);
+  }
+  
+  .nav-link {
+    font-size: var(--font-size-xs);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .header-content {
+    padding: var(--spacing-sm);
+  }
+  
+  .logo {
+    font-size: var(--font-size-lg);
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-hf);
+    box-shadow: var(--shadow-md);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-normal);
+  }
+  
+  .nav.open {
+    max-height: 400px;
+  }
+  
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--spacing-md);
+    gap: var(--spacing-sm);
+  }
+  
+  .nav-link {
+    font-size: var(--font-size-md);
+    width: 100%;
+    padding: var(--spacing-sm) 0;
+  }
+  
+  .lang-switcher {
+    display: none; /* Скрыто на мобильных, можно показать в мобильном меню */
+  }
+}
+</style>
