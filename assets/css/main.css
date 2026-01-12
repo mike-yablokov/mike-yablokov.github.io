@@ -267,6 +267,12 @@ a:focus {
 
 .grid-5 {
   grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+}
+
+.grid-5 > * {
+  width: 100%;
+  max-width: 280px;
 }
 
 /* ============================================

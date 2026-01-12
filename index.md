@@ -8,7 +8,7 @@ permalink: /
 <section class="hero-section" style="min-height: 80vh; display: flex; align-items: center; justify-content: center; background-color: var(--color-m-primary); color: var(--color-light-text); text-align: center; padding: var(--spacing-xxl) var(--spacing-md);">
   <div class="container">
     <h1 style="font-size: var(--font-size-4xl); margin-bottom: var(--spacing-md);">
-      Переводим конфликты в партнёрство,<br>а стратегии — в работающие инструменты
+      Развиваю природные территории и команды
     </h1>
     <p style="font-size: var(--font-size-xl); margin-bottom: var(--spacing-lg); opacity: 0.9;">
       Помогаю бизнесу, регионам и ООПТ находить баланс между охраной природы, экономикой и интересами людей
@@ -24,33 +24,33 @@ permalink: /
     <h2 class="text-center" style="margin-bottom: var(--spacing-xl);">Направления моей работы</h2>
     
     <div class="grid grid-5">
-      <div class="direction-card" style="background: var(--color-background); padding: var(--spacing-md); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);">
+      <div class="direction-card" style="background: var(--color-background); padding: var(--spacing-md); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
         <h3>Стратегии устойчивости</h3>
-        <p style="margin: var(--spacing-sm) 0;">Фасилитация и создание рабочих стратегий для ООПТ и бизнеса</p>
+        <p style="margin: var(--spacing-sm) 0; flex-grow: 1;">Фасилитация и создание рабочих стратегий для ООПТ и бизнеса</p>
         <a href="{{ '/strategic/' | relative_url }}" class="btn btn-primary" style="margin-top: var(--spacing-sm);">Подробнее</a>
       </div>
       
-      <div class="direction-card" style="background: var(--color-background); padding: var(--spacing-md); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);">
+      <div class="direction-card" style="background: var(--color-background); padding: var(--spacing-md); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
         <h3>Социальные решения</h3>
-        <p style="margin: var(--spacing-sm) 0;">Социологические исследования и партнерство с сообществами</p>
+        <p style="margin: var(--spacing-sm) 0; flex-grow: 1;">Социологические исследования и партнерство с сообществами</p>
         <a href="{{ '/social/' | relative_url }}" class="btn btn-primary" style="margin-top: var(--spacing-sm);">Подробнее</a>
       </div>
       
-      <div class="direction-card" style="background: var(--color-background); padding: var(--spacing-md); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);">
-        <h3>Устойчивый туризм</h3>
-        <p style="margin: var(--spacing-sm) 0;">Концепции визит-центров и турпродуктов для природных территорий</p>
+      <div class="direction-card" style="background: var(--color-background); padding: var(--spacing-md); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+        <h3>Природный туризм</h3>
+        <p style="margin: var(--spacing-sm) 0; flex-grow: 1;">Концепции визит-центров и турпродуктов для природных территорий</p>
         <a href="{{ '/tourism/' | relative_url }}" class="btn btn-primary" style="margin-top: var(--spacing-sm);">Подробнее</a>
       </div>
       
-      <div class="direction-card" style="background: var(--color-background); padding: var(--spacing-md); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);">
+      <div class="direction-card" style="background: var(--color-background); padding: var(--spacing-md); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
         <h3>Цифровые решения</h3>
-        <p style="margin: var(--spacing-sm) 0;">Цифровизация мониторинга и управления территориями</p>
+        <p style="margin: var(--spacing-sm) 0; flex-grow: 1;">Цифровизация мониторинга и управления территориями</p>
         <a href="{{ '/digital/' | relative_url }}" class="btn btn-primary" style="margin-top: var(--spacing-sm);">Подробнее</a>
       </div>
       
-      <div class="direction-card" style="background: var(--color-background); padding: var(--spacing-md); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);">
-        <h3>Обучение и развитие</h3>
-        <p style="margin: var(--spacing-sm) 0;">Практические программы по ESG и заповедному делу</p>
+      <div class="direction-card" style="background: var(--color-background); padding: var(--spacing-md); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+        <h3>Развитие команд</h3>
+        <p style="margin: var(--spacing-sm) 0; flex-grow: 1;">Практические программы по ESG и заповедному делу</p>
         <a href="{{ '/education/' | relative_url }}" class="btn btn-primary" style="margin-top: var(--spacing-sm);">Подробнее</a>
       </div>
     </div>

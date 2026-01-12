@@ -7,19 +7,19 @@
     <nav class="nav" aria-label="Основная навигация">
       <ul class="nav-list">
         <li class="nav-item">
-          <a href="{{ '/strategic/' | relative_url }}" class="nav-link">Стратегии</a>
+          <a href="{{ '/strategic/' | relative_url }}" class="nav-link">Стратегии<br>устойчивости</a>
         </li>
         <li class="nav-item">
-          <a href="{{ '/social/' | relative_url }}" class="nav-link">Социальные решения</a>
+          <a href="{{ '/social/' | relative_url }}" class="nav-link">Социальные<br>решения</a>
         </li>
         <li class="nav-item">
-          <a href="{{ '/tourism/' | relative_url }}" class="nav-link">Туризм</a>
+          <a href="{{ '/tourism/' | relative_url }}" class="nav-link">Природный<br>туризм</a>
         </li>
         <li class="nav-item">
-          <a href="{{ '/digital/' | relative_url }}" class="nav-link">Цифровизация</a>
+          <a href="{{ '/digital/' | relative_url }}" class="nav-link">Цифровые<br>решения</a>
         </li>
         <li class="nav-item">
-          <a href="{{ '/education/' | relative_url }}" class="nav-link">Обучение</a>
+          <a href="{{ '/education/' | relative_url }}" class="nav-link">Развитие<br>команд</a>
         </li>
       </ul>
     </nav>
@@ -94,7 +94,8 @@
   text-decoration: none;
   opacity: 0.85;
   transition: opacity var(--transition-fast), color var(--transition-fast);
-  white-space: nowrap;
+  text-align: center;
+  line-height: 1.3;
 }
 
 .nav-link:hover {
@@ -256,7 +257,7 @@
   }
   
   .lang-switcher {
-    display: none; /* Скрыто на мобильных, можно показать в мобильном меню */
+    /* Показываем на мобильных, но EN пока disabled */
   }
 }
 </style>
