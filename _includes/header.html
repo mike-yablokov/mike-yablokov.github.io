@@ -95,7 +95,9 @@
   opacity: 0.85;
   transition: opacity var(--transition-fast), color var(--transition-fast);
   text-align: center;
-  line-height: 1.3;
+  line-height: 1.0;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .nav-link:hover {
@@ -256,8 +258,22 @@
     padding: var(--spacing-sm) 0;
   }
   
+  .header-content {
+    flex-wrap: nowrap;
+  }
+  
   .lang-switcher {
-    /* Показываем на мобильных, но EN пока disabled */
+    order: 2;
+    margin-left: auto;
+  }
+  
+  .mobile-menu-toggle {
+    order: 3;
+    margin-left: var(--spacing-xs);
+  }
+  
+  .nav {
+    order: 1;
   }
 }
 </style>

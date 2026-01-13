@@ -1,16 +1,46 @@
 <footer class="footer">
   <div class="footer-content">
-    <!-- Левая колонка: О себе -->
+    <!-- Левая колонка: О себе + Контакты -->
     <div class="footer-section footer-about">
-      <h3 class="footer-title">Михаил Яблоков</h3>
+      <h3 class="footer-title"><a href="{{ '/' | relative_url }}" class="footer-title-link">Михаил Яблоков</a></h3>
       <p class="footer-text">
-        Эксперт по территориальной охране природы, стратегическому планированию, развитию природного туризма и социальным решениям.
+        Эксперт по территориальной охране природы, стратегическому планированию, развитию природного туризма и социальным решениям. <a href="{{ '/pdfs/ruYablokovCV.pdf' | relative_url }}" target="_blank" class="footer-link-inline"> Скачать резюме.</a>
       </p>
+      
+      <h4 class="footer-contacts-title">Контакты:</h4>
+      <div class="footer-contacts">
+        <div class="footer-contact-row">
+          <div class="footer-contact-item" id="footer-phone"></div>
+          <div class="footer-contact-item" id="footer-email"></div>
+        </div>
+        <div class="footer-messengers">
+          <a href="https://wa.me/79210038522" target="_blank" rel="noopener noreferrer" title="WhatsApp" class="footer-social-link">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+            WhatsApp
+          </a>
+          <a href="https://t.me/mi2603" target="_blank" rel="noopener noreferrer" title="Telegram" class="footer-social-link">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.12l-6.87 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"/>
+            </svg>
+            Telegram
+          </a>
+          <a href="https://vk.com/ymike_mail_ru" target="_blank" rel="noopener noreferrer" title="VK" class="footer-social-link">
+            <svg class="social-icon" viewBox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <g transform="translate(0,512) scale(0.1,-0.1)">
+                <path d="M1835 5109 c-231 -3 -474 -12 -540 -18 -491 -48 -732 -136 -936 -342 -192 -194 -285 -449 -329 -910 -20 -215 -32 -1254 -21 -1867 11 -585 17 -701 47 -901 62 -425 216 -688 501 -855 188 -110 461 -170 888 -196 220 -13 2006 -13 2235 0 553 32 849 125 1065 335 228 223 319 504 356 1105 15 249 15 1951 0 2200 -36 594 -128 882 -350 1100 -197 195 -443 283 -916 330 -119 12 -992 30 -1355 28 -124 -1 -414 -5 -645 -9z m-345 -1614 c30 -27 51 -70 100 -205 176 -478 484 -942 600 -905 43 14 45 32 45 405 -1 339 -2 358 -22 412 -12 32 -37 78 -55 104 -61 85 -68 99 -68 132 0 22 8 41 25 57 l24 25 340 0 c187 0 347 -3 356 -6 8 -4 23 -21 33 -38 15 -27 18 -80 22 -467 5 -465 6 -469 55 -469 31 0 107 53 161 113 131 144 240 316 389 611 96 192 114 221 145 238 32 17 56 18 293 16 258 -3 259 -3 278 -27 64 -79 -38 -297 -371 -796 -147 -220 -150 -225 -150 -260 0 -38 27 -73 170 -220 414 -425 534 -655 373 -716 -13 -5 -131 -9 -260 -9 -221 0 -240 1 -280 21 -31 15 -90 71 -193 183 -195 212 -315 317 -425 373 -62 32 -134 36 -163 10 -19 -17 -20 -33 -24 -255 -2 -165 -7 -244 -16 -259 -24 -43 -87 -65 -203 -71 -351 -16 -705 141 -1000 445 -300 309 -661 947 -766 1353 -30 118 -27 174 12 208 27 23 27 23 290 20 247 -3 264 -4 285 -23z"/>
+              </g>
+            </svg>
+            VK
+          </a>
+        </div>
+      </div>
     </div>
     
-    <!-- Средняя колонка: Навигация -->
+    <!-- Правая колонка: Навигация -->
     <div class="footer-section footer-nav">
-      <h4 class="footer-title">Направления</h4>
+      <h4 class="footer-title"><a href="{{ '/' | relative_url }}" class="footer-title-link">Направления</a></h4>
       <ul class="footer-links">
         <li><a href="{{ '/strategic/' | relative_url }}">Стратегии устойчивости</a></li>
         <li><a href="{{ '/social/' | relative_url }}">Социальные решения для территорий</a></li>
@@ -19,44 +49,22 @@
         <li><a href="{{ '/education/' | relative_url }}">Обучение и развитие команд</a></li>
       </ul>
     </div>
-    
-    <!-- Правая колонка: Контакты -->
-    <div class="footer-section footer-contact">
-      <h4 class="footer-title">Контакты</h4>
-      <ul class="footer-links">
-        <li>
-          <a href="mailto:ymike@mail.ru" class="footer-email">ymike@mail.ru</a>
-        </li>
-        <li>
-          <a href="{{ '/pdfs/ruYablokovCV.pdf' | relative_url }}" class="footer-cv" download>
-            Скачать резюме (CV)
-          </a>
-        </li>
-      </ul>
-    </div>
   </div>
   
-  <!-- Копирайт -->
-  <div class="footer-bottom">
-    <p class="footer-copyright">
-      &copy; {{ 'now' | date: "%Y" }} Михаил Яблоков. Все права защищены.
-    </p>
-    <p class="footer-built">
-      Разработано с использованием Jekyll и GitHub Pages
-    </p>
+  <div class="footer-copyright">
+    <p>&copy; 2026 Михаил Яблоков. Все права защищены.</p>
   </div>
 </footer>
 
 <style>
 /* ============================================
-   FOOTER STYLES
+   FOOTER STYLES - Гибридная версия
    ============================================ */
 
 .footer {
   background-color: var(--color-hf);
   color: var(--color-light-text);
-  padding: var(--spacing-xl) 0 var(--spacing-md);
-  margin-top: var(--spacing-xxl);
+  padding: var(--spacing-lg) 0 var(--spacing-md);
 }
 
 .footer-content {
@@ -64,9 +72,8 @@
   margin: 0 auto;
   padding: 0 var(--spacing-md);
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: var(--spacing-lg);
-  margin-bottom: var(--spacing-lg);
+  grid-template-columns: 2fr 1fr;
+  gap: var(--spacing-xl);
 }
 
 .footer-section {
@@ -78,17 +85,126 @@
 .footer-title {
   font-size: var(--font-size-lg);
   font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: var(--spacing-xs);
+}
+
+.footer-title-link {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer-title-link:hover {
   color: var(--color-add-acc);
-  margin-bottom: var(--spacing-sm);
 }
 
 .footer-text {
   font-size: var(--font-size-sm);
   line-height: 1.6;
-  opacity: 0.85;
-  color: var(--color-light-text);
+  opacity: 0.9;
+  margin-bottom: var(--spacing-md);
 }
 
+.footer-link-inline {
+  color: var(--color-add-acc);
+  text-decoration: underline;
+  transition: opacity var(--transition-fast), color var(--transition-fast);
+}
+
+.footer-link-inline:hover {
+  opacity: 0.8;
+}
+
+.footer-contacts-title {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: var(--spacing-xs);
+  margin-top: 0;
+}
+
+.footer-text-small {
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Контакты */
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.footer-contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+
+.footer-messengers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-xxs);
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--font-size-sm);
+}
+
+.footer-contact-item a {
+  color: var(--color-light-text);
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity var(--transition-fast), color var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-contact-item a:hover {
+  opacity: 1;
+  color: var(--color-add-acc);
+}
+
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--font-size-sm);
+}
+
+.footer-social-link {
+  color: var(--color-light-text);
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity var(--transition-fast), color var(--transition-fast);
+}
+
+.footer-social-link:hover {
+  opacity: 1;
+  color: var(--color-add-acc);
+}
+
+.social-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.contact-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Навигация */
 .footer-links {
   list-style: none;
   display: flex;
@@ -98,9 +214,10 @@
 
 .footer-links a {
   color: var(--color-light-text);
-  font-size: var(--font-size-sm);
+  text-decoration: none;
   opacity: 0.85;
   transition: opacity var(--transition-fast), color var(--transition-fast);
+  font-size: var(--font-size-sm);
 }
 
 .footer-links a:hover {
@@ -108,68 +225,78 @@
   color: var(--color-add-acc);
 }
 
-.footer-email,
-.footer-cv {
-  font-weight: 600;
-}
-
-/* Footer Bottom */
-.footer-bottom {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: var(--spacing-md) var(--spacing-md) 0;
-  border-top: 1px solid rgba(254, 250, 224, 0.2);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: var(--spacing-sm);
-}
-
-.footer-copyright,
-.footer-built {
-  font-size: var(--font-size-xs);
-  opacity: 0.7;
+.footer-link {
   color: var(--color-light-text);
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity var(--transition-fast), color var(--transition-fast);
 }
 
-/* ============================================
-   RESPONSIVE
-   ============================================ */
+.footer-link:hover {
+  opacity: 1;
+  color: var(--color-add-acc);
+}
 
-/* Tablet */
-@media (max-width: 1024px) {
-  .footer-content {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-md);
-  }
-  
-  .footer-about {
-    grid-column: 1 / -1;
-  }
+/* Copyright */
+.footer-copyright {
+  max-width: 1400px;
+  margin: var(--spacing-md) auto 0;
+  padding: var(--spacing-md) var(--spacing-md) 0;
+  border-top: 1px solid rgba(254, 250, 224, 0.1);
+  text-align: center;
+  opacity: 0.7;
+  font-size: var(--font-size-xs);
+}
+
+.footer-copyright p {
+  margin: 0;
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-  .footer {
-    padding: var(--spacing-lg) 0 var(--spacing-sm);
-    margin-top: var(--spacing-xl);
-  }
-  
   .footer-content {
     grid-template-columns: 1fr;
     gap: var(--spacing-md);
-    padding: 0 var(--spacing-sm);
-  }
-  
-  .footer-about {
-    grid-column: 1;
-  }
-  
-  .footer-bottom {
-    flex-direction: column;
     text-align: center;
-    padding: var(--spacing-sm);
+  }
+  
+  .footer-contacts {
+    align-items: center;
+  }
+  
+  .footer-links {
+    align-items: center;
   }
 }
 </style>
+
+<script>
+// Защита контактов от ботов (JS-обфускация)
+function decodeContact(parts) {
+  return parts.join('');
+}
+
+// Контакты разбиты на части
+const phoneParts = ['+7', ' 921', ' 003', ' 8522'];
+const emailParts = ['ymike', '@', 'mail', '.ru'];
+
+// Раскодируем при загрузке страницы
+document.addEventListener('DOMContentLoaded', function() {
+  const phoneElement = document.getElementById('footer-phone');
+  const emailElement = document.getElementById('footer-email');
+  
+  if (phoneElement) {
+    const phone = decodeContact(phoneParts);
+    phoneElement.innerHTML = '<a href="tel:' + phone.replace(/\s/g, '') + '">' +
+      '<svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>' +
+      ' ' + phone + '</a>';
+  }
+  
+  if (emailElement) {
+    const email = decodeContact(emailParts);
+    emailElement.innerHTML = '<a href="mailto:' + email + '">' +
+      '<svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>' +
+      ' ' + email + '</a>';
+  }
+});
+</script>
