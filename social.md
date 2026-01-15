@@ -87,6 +87,54 @@ permalink: /social/
     text-align: left !important;
   }
 }
+
+/* Адаптация подсекции 7.5.1 (Особый кейс - вступление) */
+.special-case-intro {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--spacing-md);
+}
+
+@media (max-width: 900px) {
+  .special-case-intro {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Адаптация заголовков подсекций особого кейса */
+.special-case-heading {
+  font-weight: 700;
+  font-size: 36px;
+}
+
+@media (max-width: 1024px) {
+  .special-case-heading {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .special-case-heading {
+    font-size: 22px;
+  }
+}
+
+/* Адаптация секции 9 (Результаты) */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+@media (max-width: 1024px) {
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .results-grid > div[style*="grid-column: span 2"] {
+    grid-column: span 1 !important;
+  }
+}
 </style>
 
 <!-- 1. HERO-СЕКЦИЯ -->
@@ -370,8 +418,8 @@ permalink: /social/
 <!-- 7.5.2. Вызов (Проблема «До») -->
 <section style="padding: var(--spacing-lg) 0; background-color: var(--color-background);">
   <div class="container">
-    <p style="color: var(--color-dark-text); font-size: var(--font-size-lg); line-height: 1.7;">
-      <span style="font-weight: 700; font-size: 36px; color: var(--color-2-primary);">Вызов:</span> Успех проекта по внедрению современных методов охраны в двух ООПТ Кыргызстана зависел от поддержки местных сообществ. Однако у заказчика были лишь предположения об отношении жителей к территории и снежному барсу. Без объективных данных любые действия — будь то информирование или ограничения — несли высокий риск быть неэффективными или даже усугубить напряжённость.
+    <p style="color: var(--color-dark-text); line-height: 1.7;">
+      <span class="special-case-heading" style="color: var(--color-2-primary);">Вызов:</span> Успех проекта по внедрению современных методов охраны в двух ООПТ Кыргызстана зависел от поддержки местных сообществ. Однако у заказчика были лишь предположения об отношении жителей к территории и снежному барсу. Без объективных данных любые действия — будь то информирование или ограничения — несли высокий риск быть неэффективными или даже усугубить напряжённость.
     </p>
   </div>
 </section>
@@ -379,8 +427,8 @@ permalink: /social/
 <!-- 7.5.3. Решение (Процесс) - ТЕМНЫЙ БЛОК -->
 <section style="padding: var(--spacing-lg) 0; background-color: var(--color-2-primary); color: var(--color-light-text);">
   <div class="container">
-    <p style="color: var(--color-light-text); font-size: var(--font-size-lg); line-height: 1.7; margin-bottom: var(--spacing-md);">
-      <span style="font-weight: 700; font-size: 36px; color: var(--color-accent);">Решение:</span> Я спроектировал и провёл анонимный опрос 90 жителей удалённых сёл, чтобы заменить субъективные представления — объективными фактами. Анализ показал ключевой инсайт: люди гордятся снежным барсом как символом своей земли, и браконьерство связано не с враждебностью, а с отсутствием альтернативных скотоводству источников дохода. При этом 87% респондентов выразили готовность сотрудничать с ООПТ и интерес к развитию туризма, но не знали, с чего начать.
+    <p style="color: var(--color-light-text); line-height: 1.7; margin-bottom: var(--spacing-md);">
+      <span class="special-case-heading" style="color: var(--color-accent);">Решение:</span> Я спроектировал и провёл анонимный опрос 90 жителей удалённых сёл, чтобы заменить субъективные представления — объективными фактами. Анализ показал ключевой инсайт: люди гордятся снежным барсом как символом своей земли, и браконьерство связано не с враждебностью, а с отсутствием альтернативных скотоводству источников дохода. При этом 87% респондентов выразили готовность сотрудничать с ООПТ и интерес к развитию туризма, но не знали, с чего начать.
     </p>
   </div>
 </section>
@@ -391,7 +439,7 @@ permalink: /social/
     <h3 style="text-align: center; color: var(--color-accent); margin-bottom: var(--spacing-md); font-size: var(--font-size-2xl);">
       Итог
     </h3>
-    <ul style="color: var(--color-dark-text); font-size: var(--font-size-lg); line-height: 1.8; list-style: none; padding: 0;">
+    <ul style="color: var(--color-dark-text); line-height: 1.8; list-style: none; padding: 0;">
       <li style="margin-bottom: var(--spacing-sm); padding-left: var(--spacing-lg); position: relative;">
         <span style="position: absolute; left: 0; color: var(--color-accent); font-weight: 700;">✓</span>
         Заказчик (WCS/CEPF) получил не просто отчёт, а основу для управленческих решений: чёткую картину мотивов сообщества и три практических направления действий — целевая информационная работа, формирование общественной поддержки и, главное, развитие туризма как устойчивого источника дохода для местных жителей.
@@ -403,7 +451,7 @@ permalink: /social/
 <!-- 7.5.5. Ценность для будущего клиента -->
 <section style="padding: var(--spacing-lg) 0; background-color: var(--color-add-bg);">
   <div class="container">
-    <p style="color: var(--color-dark-text); font-size: var(--font-size-xl); line-height: 1.7; font-weight: 500; text-align: left; font-style: italic; border-left: 4px solid var(--color-accent); padding-left: var(--spacing-lg);">
+    <p style="color: var(--color-dark-text); line-height: 1.7; font-weight: 500; text-align: left; font-style: italic; border-left: 4px solid var(--color-accent); padding-left: var(--spacing-lg);">
       Этот кейс показывает, как объективные данные помогают находить точки роста даже в сложных социально-экологических ситуациях. Моя двойная экспертиза — практический опыт управления ООПТ и навыки социологического анализа — позволяет не просто собрать информацию, а сразу перевести её в конкретные шаги. Если ваша деятельность — будь то охрана природы, добыча ресурсов или природопользование — зависит от отношения местного сообщества, такой подход даст вам ясность и научно обоснованную основу для решений.
     </p>
   </div>
@@ -488,7 +536,7 @@ permalink: /social/
       Конкретные инструменты и ясность вместо неопределённости и конфликта
     </p>
     
-    <div class="grid grid-2" style="column-gap: var(--spacing-md); row-gap: var(--spacing-md);">
+    <div class="results-grid">
       <!-- Результат 1 -->
       <div style="background: var(--color-background); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-2-secondary);">
         <h3 style="color: var(--color-2-primary); margin-bottom: var(--spacing-md);">Объективный диагноз ситуации</h3>
@@ -520,17 +568,18 @@ permalink: /social/
           Вы будете понимать логику происходящего и получите инструменты для управления ситуацией. Это снижает репутационные и операционные риски, особенно для бизнеса.
         </p>
       </div>
-    </div>
-    
-    <div style="margin-top: var(--spacing-xl); background: var(--color-background); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-2-secondary);">
-      <h3 style="color: var(--color-2-primary); margin-bottom: var(--spacing-md);">Основа для долгосрочной стратегии взаимодействия</h3>
-      <p style="color: var(--color-dark-text); line-height: 1.5;">
-        Итоги исследования станут фундаментом для построения устойчивых отношений с местным сообществом, что критически важно для долгосрочной работы на территории.
-      </p>
       
+      <!-- Результат 5 -->
+      <div style="background: var(--color-background); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-2-secondary); grid-column: span 2;">
+        <h3 style="color: var(--color-2-primary); margin-bottom: var(--spacing-md);">Основа для долгосрочной стратегии взаимодействия</h3>
+        <p style="color: var(--color-dark-text); line-height: 1.5;">
+          Итоги исследования станут фундаментом для построения устойчивых отношений с местным сообществом, что критически важно для долгосрочной работы на территории.
+        </p>
+        
         <p style="color: var(--color-dark-text); margin-top: var(--spacing-md); font-style: italic; border-left: 4px solid var(--color-accent); padding-left: var(--spacing-md);">
-        <strong style="color: var(--color-2-primary);">Честно о главном:</strong> Социологическое исследование не «решает» конфликт волшебным образом. Оно даёт карту и компас — понимание ситуации и направление движения. Реальные изменения наступают, когда вы начинаете применять рекомендации на практике. Моя задача — сделать эту карту максимально точной, а компас — надёжным.
-      </p>
+          <strong style="color: var(--color-2-primary);">Честно о главном:</strong> Социологическое исследование не «решает» конфликт волшебным образом. Оно даёт карту и компас — понимание ситуации и направление движения. Реальные изменения наступают, когда вы начинаете применять рекомендации на практике. Моя задача — сделать эту карту максимально точной, а компас — надёжным.
+        </p>
+      </div>
     </div>
   </div>
 </section>

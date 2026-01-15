@@ -87,6 +87,54 @@ permalink: /tourism/
     grid-column: span 1 !important;
   }
 }
+
+/* Адаптация подсекции 7.5.1 (Особый кейс - вступление) */
+.special-case-intro {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--spacing-md);
+}
+
+@media (max-width: 900px) {
+  .special-case-intro {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Адаптация заголовков подсекций особого кейса */
+.special-case-heading {
+  font-weight: 700;
+  font-size: 36px;
+}
+
+@media (max-width: 1024px) {
+  .special-case-heading {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .special-case-heading {
+    font-size: 22px;
+  }
+}
+
+/* Адаптация секции 9 (Результаты) */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+@media (max-width: 1024px) {
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .results-grid > div[style*="grid-column: span 2"] {
+    grid-column: span 1 !important;
+  }
+}
 </style>
 
 <!-- 1. HERO-СЕКЦИЯ -->
@@ -348,7 +396,7 @@ permalink: /tourism/
 <!-- 7.5.1. Заголовок + Подзаголовок + Фото -->
 <section id="kejs-3-0" style="padding: var(--spacing-lg) 0; background-color: var(--color-add-bg);">
   <div class="container">
-    <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: var(--spacing-md);">
+    <div class="special-case-intro">
       <!-- Текст слева -->
       <div>
         <h2 style="color: var(--color-3-primary); margin-bottom: var(--spacing-md);">
@@ -370,8 +418,8 @@ permalink: /tourism/
 <!-- 7.5.2. Вызов (Проблема «До») -->
 <section style="padding: var(--spacing-lg) 0; background-color: var(--color-background);">
   <div class="container">
-    <p style="color: var(--color-dark-text); font-size: var(--font-size-lg); line-height: 1.7;">
-      <span style="font-weight: 700; font-size: 36px; color: var(--color-3-primary);">Вызов:</span> Урочище «Семь Братьев» (Семибратка) — один из главных входов в нацпарк «Таганай», ежегодная посещаемость парка около 200 000 посетителей. Но Семибратка была «точка ноль»: проселочная дорога, стихийная парковка на обочине, сеть тропинок, ведущих вглубь ООПТ. Не было ни информации, ни инфраструктуры, ни понятных правил. Ключевой вызов заключался в противоречии интересов: местные жители видели здесь просто лес для пикника, туристы-походники — стартовую точку без «лишней» цивилизации, а парк не мог выполнять просветительскую миссию и управлять потоком.
+    <p style="color: var(--color-dark-text); line-height: 1.7;">
+      <span class="special-case-heading" style="color: var(--color-3-primary);">Вызов:</span> Урочище «Семь Братьев» (Семибратка) — один из главных входов в нацпарк «Таганай», ежегодная посещаемость парка около 200 000 посетителей. Но Семибратка была «точка ноль»: проселочная дорога, стихийная парковка на обочине, сеть тропинок, ведущих вглубь ООПТ. Не было ни информации, ни инфраструктуры, ни понятных правил. Ключевой вызов заключался в противоречии интересов: местные жители видели здесь просто лес для пикника, туристы-походники — стартовую точку без «лишней» цивилизации, а парк не мог выполнять просветительскую миссию и управлять потоком.
     </p>
   </div>
 </section>
@@ -379,19 +427,19 @@ permalink: /tourism/
 <!-- 7.5.3. Решение (Процесс) - ТЕМНЫЙ БЛОК -->
 <section style="padding: var(--spacing-lg) 0; background-color: var(--color-3-primary); color: var(--color-light-text);">
   <div class="container">
-    <p style="color: var(--color-light-text); font-size: var(--font-size-lg); line-height: 1.7; margin-bottom: var(--spacing-md);">
-      <span style="font-weight: 700; font-size: 36px; color: var(--color-accent);">Решение:</span> Я применил авторскую методику, где во главу угла ставится не объект, а баланс целей территории и потребностей аудитории.
+    <p style="color: var(--color-light-text); line-height: 1.7; margin-bottom: var(--spacing-md);">
+      <span class="special-case-heading" style="color: var(--color-accent);">Решение:</span> Я применил авторскую методику, где во главу угла ставится не объект, а баланс целей территории и потребностей аудитории.
     </p>
     
-    <p style="color: var(--color-light-text); font-size: var(--font-size-lg); line-height: 1.7; opacity: 0.95; margin-bottom: var(--spacing-md);">
+    <p style="color: var(--color-light-text); line-height: 1.7; opacity: 0.95; margin-bottom: var(--spacing-md);">
       <strong>Шаг 1: Анализ без компромиссов.</strong> Я детально сегментировал всех посетителей (от жителей Златоуста до приезжих туристов) и выявил их истинные мотивы и «боли». Это позволило говорить с каждой группой на её языке.
     </p>
     
-    <p style="color: var(--color-light-text); font-size: var(--font-size-lg); line-height: 1.7; opacity: 0.95; margin-bottom: var(--spacing-md);">
+    <p style="color: var(--color-light-text); line-height: 1.7; opacity: 0.95; margin-bottom: var(--spacing-md);">
       <strong>Шаг 2: Проектирование через синтез.</strong> Вместо ультиматумов я создал концепцию, которая интегрировала все интересы. Для местных — комфортная парковка, беседки и краеведческая история. Для туристов — логичная навигация и информация о маршрутах. Для парка — центральный элемент: современный визит-центр, чья экспозиция не «читает лекции», а вовлекает через интерактив и эмоции (например, кормушки для птиц прямо у панорамного окна).
     </p>
     
-    <p style="color: var(--color-light-text); font-size: var(--font-size-lg); line-height: 1.7; opacity: 0.95;">
+    <p style="color: var(--color-light-text); line-height: 1.7; opacity: 0.95;">
       <strong>Шаг 3: Фокус на главном — поддержке ООПТ.</strong> Каждый элемент, от планировки до текста на стенде, работал на ключевую цель: сформировать у посетителя понимание и гордость за парк, показать его личную роль в сохранении природы.
     </p>
   </div>
@@ -403,7 +451,7 @@ permalink: /tourism/
     <h3 style="text-align: center; color: var(--color-accent); margin-bottom: var(--spacing-md); font-size: var(--font-size-2xl);">
       Итог
     </h3>
-    <ul style="color: var(--color-dark-text); font-size: var(--font-size-lg); line-height: 1.8; list-style: none; padding: 0;">
+    <ul style="color: var(--color-dark-text); line-height: 1.8; list-style: none; padding: 0;">
       <li style="margin-bottom: var(--spacing-sm); padding-left: var(--spacing-lg); position: relative;">
         <span style="position: absolute; left: 0; color: var(--color-accent); font-weight: 700;">✓</span>
         <strong>Для посетителей:</strong> Это стало комфортным, современным и интересным местом старта. Они получают нужную информацию легко и с удовольствием.
@@ -423,7 +471,7 @@ permalink: /tourism/
 <!-- 7.5.5. Ценность для будущего клиента -->
 <section style="padding: var(--spacing-lg) 0; background-color: var(--color-add-bg);">
   <div class="container">
-    <p style="color: var(--color-dark-text); font-size: var(--font-size-xl); line-height: 1.7; font-weight: 500; text-align: left; font-style: italic; border-left: 4px solid var(--color-accent); padding-left: var(--spacing-lg);">
+    <p style="color: var(--color-dark-text); line-height: 1.7; font-weight: 500; text-align: left; font-style: italic; border-left: 4px solid var(--color-accent); padding-left: var(--spacing-lg);">
       Этот кейс — готовый алгоритм для любой территории, стоящей перед развитием туризма. Будь то федеральный нацпарк, регион, планирующий кластер, или турбизнес, который хочет работать на ООПТ легально и устойчиво. Я не просто рисую красивые объекты. Я создаю социальный договор в виде инфраструктуры: нахожу баланс между спросом аудитории, экономикой и миссией охраны природы. Если вам нужно превратить проблемное место в точку роста, которая будет приносить доход, лояльность и реальную поддержку вашим целям — эта методология ваш выбор.
     </p>
   </div>
@@ -508,7 +556,7 @@ permalink: /tourism/
       Конкретный продукт и ясность вместо неопределённости
     </p>
     
-    <div class="grid grid-2" style="column-gap: var(--spacing-md); row-gap: var(--spacing-md);">
+    <div class="results-grid">
       <!-- Результат 1 -->
       <div style="background: var(--color-background); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-3-secondary);">
         <h3 style="color: var(--color-3-primary); margin-bottom: var(--spacing-md);">Детальная, реализуемая концепция</h3>
@@ -540,12 +588,13 @@ permalink: /tourism/
           Вы получите не просто идею, а научно обоснованный, пошаговый план действий: что делать, в какой последовательности, на что обратить внимание.
         </p>
       </div>
-    </div>
-    
-    <div style="margin-top: var(--spacing-xl); background: var(--color-background); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-3-secondary);">
-        <p style="color: var(--color-dark-text); margin-top: var(--spacing-md); font-style: italic; border-left: 4px solid var(--color-accent); padding-left: var(--spacing-md);">
-        <strong style="color: var(--color-3-primary);">Честно о главном:</strong> Я создаю профессиональный Концепт туристического продукта. Его реализация зависит от многих факторов: финансирования, команды, воли заказчика. Но с качественной концепцией вы стартуете не с чистого листа, а с детальной карты, которая в разы увеличивает шансы на успех.
-      </p>
+      
+      <!-- Результат 5 -->
+      <div style="background: var(--color-background); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-3-secondary); grid-column: span 2;">
+        <p style="color: var(--color-dark-text); font-style: italic; border-left: 4px solid var(--color-accent); padding-left: var(--spacing-md);">
+          <strong style="color: var(--color-3-primary);">Честно о главном:</strong> Я создаю профессиональный Концепт туристического продукта. Его реализация зависит от многих факторов: финансирования, команды, воли заказчика. Но с качественной концепцией вы стартуете не с чистого листа, а с детальной карты, которая в разы увеличивает шансы на успех.
+        </p>
+      </div>
     </div>
   </div>
 </section>

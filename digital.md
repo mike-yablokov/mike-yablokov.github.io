@@ -87,6 +87,54 @@ permalink: /digital/
     grid-column: span 1 !important;
   }
 }
+
+/* Адаптация подсекции 7.5.1 (Особый кейс - вступление) */
+.special-case-intro {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--spacing-md);
+}
+
+@media (max-width: 900px) {
+  .special-case-intro {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Адаптация заголовков подсекций особого кейса */
+.special-case-heading {
+  font-weight: 700;
+  font-size: 36px;
+}
+
+@media (max-width: 1024px) {
+  .special-case-heading {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .special-case-heading {
+    font-size: 22px;
+  }
+}
+
+/* Адаптация секции 9 (Результаты) */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+@media (max-width: 1024px) {
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .results-grid > div[style*="grid-column: span 2"] {
+    grid-column: span 1 !important;
+  }
+}
 </style>
 
 <!-- 1. HERO-СЕКЦИЯ -->
@@ -337,7 +385,7 @@ permalink: /digital/
 <!-- 7.5.1. Заголовок + Подзаголовок + Фото -->
 <section id="kejs-4-0" style="padding: var(--spacing-lg) 0; background-color: var(--color-add-bg);">
   <div class="container">
-    <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: var(--spacing-md);">
+    <div class="special-case-intro">
       <!-- Текст слева -->
       <div>
         <h2 style="color: var(--color-4-primary); margin-bottom: var(--spacing-md);">
@@ -359,7 +407,7 @@ permalink: /digital/
 <!-- 7.5.2. Вызов (Проблема «До») -->
 <section style="padding: var(--spacing-lg) 0; background-color: var(--color-background);">
   <div class="container">
-    <p style="color: var(--color-dark-text); font-size: var(--font-size-lg); line-height: 1.7;">
+    <p style="color: var(--color-dark-text); line-height: 1.7;">
       <span style="font-weight: 700; font-size: 36px; color: var(--color-4-primary);">Вызов:</span> До внедрения системы работа строилась на бумаге и интуиции. Инспекторы фиксировали данные в блокнотах, а начальнику охраны приходилось неделями сводить вручную разрозненные сведения для отчётов. Не было объективной картины: где чаще всего происходят нарушения? Где концентрируются редкие виды? Эффективно ли распределяются патрули? Управление строилось на привычках, а не на данных. Это приводило к потере информации, нерациональному использованию ресурсов и невозможности объективно оценить эффективность работы перед руководством и надзорными органами.
     </p>
   </div>
@@ -368,19 +416,19 @@ permalink: /digital/
 <!-- 7.5.3. Решение (Процесс) - ТЕМНЫЙ БЛОК -->
 <section style="padding: var(--spacing-lg) 0; background-color: var(--color-4-primary); color: var(--color-light-text);">
   <div class="container">
-    <p style="color: var(--color-light-text); font-size: var(--font-size-lg); line-height: 1.7; margin-bottom: var(--spacing-md);">
-      <span style="font-weight: 700; font-size: 36px; color: var(--color-accent);">Решение:</span> Я выступаю как проводник между миром охраны природы и миром IT. Моя задача — не продать «модную систему», а решить ваши конкретные операционные проблемы.
+    <p style="color: var(--color-light-text); line-height: 1.7; margin-bottom: var(--spacing-md);">
+      <span class="special-case-heading" style="color: var(--color-accent);">Решение:</span> Я выступаю как проводник между миром охраны природы и миром IT. Моя задача — не продать «модную систему», а решить ваши конкретные операционные проблемы.
     </p>
     
-    <p style="color: var(--color-light-text); font-size: var(--font-size-lg); line-height: 1.7; opacity: 0.95; margin-bottom: var(--spacing-md);">
+    <p style="color: var(--color-light-text); line-height: 1.7; opacity: 0.95; margin-bottom: var(--spacing-md);">
       <strong>Этап 1: Перевод потребностей в цифру.</strong> Вместе с заказчиком я определяю: какие отчёты нужны руководству и надзорным органам? Какие данные должны собирать специалисты в поле для обеспечения прозрачности и контроля?
     </p>
     
-    <p style="color: var(--color-light-text); font-size: var(--font-size-lg); line-height: 1.7; opacity: 0.95; margin-bottom: var(--spacing-md);">
+    <p style="color: var(--color-light-text); line-height: 1.7; opacity: 0.95; margin-bottom: var(--spacing-md);">
       <strong>Этап 2: Адаптация SMART под российские реалии.</strong> Я настраиваю структуру базы данных, создаю удобные формы для мобильного приложения, пишу скрипты для автоматических отчётов. Система учится говорить на вашем языке и решать ваши задачи.
     </p>
     
-    <p style="color: var(--color-light-text); font-size: var(--font-size-lg); line-height: 1.7; opacity: 0.95;">
+    <p style="color: var(--color-light-text); line-height: 1.7; opacity: 0.95;">
       <strong>Этап 3: Внедрение и «оживление» системы.</strong> Я устанавливаю SMART на компьютеры и смартфоны, провожу обучение для сотрудников (часто впервые работающих со смартфоном в поле) и для аналитиков. Затем сопровождаю проект в течение года, чтобы система стала частью повседневной работы, а не обузой.
     </p>
   </div>
@@ -392,7 +440,7 @@ permalink: /digital/
     <h3 style="text-align: center; color: var(--color-accent); margin-bottom: var(--spacing-md); font-size: var(--font-size-2xl);">
       Итог
     </h3>
-    <ul style="color: var(--color-dark-text); font-size: var(--font-size-lg); line-height: 1.8; list-style: none; padding: 0;">
+    <ul style="color: var(--color-dark-text); line-height: 1.8; list-style: none; padding: 0;">
       <li style="margin-bottom: var(--spacing-sm); padding-left: var(--spacing-lg); position: relative;">
         <span style="position: absolute; left: 0; color: var(--color-accent); font-weight: 700;">✓</span>
         <strong>Отчёты за минуту.</strong> Квартальный отчёт по нарушениям, на который раньше уходила неделя, формируется одним кликом.
@@ -416,7 +464,7 @@ permalink: /digital/
 <!-- 7.5.5. Ценность для будущего клиента -->
 <section style="padding: var(--spacing-lg) 0; background-color: var(--color-add-bg);">
   <div class="container">
-    <p style="color: var(--color-dark-text); font-size: var(--font-size-xl); line-height: 1.7; font-weight: 500; text-align: left; font-style: italic; border-left: 4px solid var(--color-accent); padding-left: var(--spacing-lg);">
+    <p style="color: var(--color-dark-text); line-height: 1.7; font-weight: 500; text-align: left; font-style: italic; border-left: 4px solid var(--color-accent); padding-left: var(--spacing-lg);">
       Этот кейс доказывает, что цифровизация в управлении природными территориями — это не про сложные технологии для IT-специалистов. Это про ясность и контроль для руководителя. Внедрение SMART через меня — это гарантия, что система будет работать именно в ваших условиях, будь то федеральный заповедник, охотничье хозяйство или добывающая компания, ведущая экологический мониторинг. Вы получите не софт, а инструмент для принятия обоснованных решений и доказательства эффективности вашей работы перед любыми проверяющими и стейкхолдерами.
     </p>
   </div>
@@ -468,7 +516,7 @@ permalink: /digital/
       Конкретные выгоды, которые почувствуют ваши сотрудники и руководство
     </p>
     
-    <div class="grid grid-2" style="column-gap: var(--spacing-md); row-gap: var(--spacing-md);">
+    <div class="results-grid">
       <!-- Результат 1 -->
       <div style="background: var(--color-background); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-4-secondary);">
         <h3 style="color: var(--color-4-primary); margin-bottom: var(--spacing-md);">Сокращение бумажной рутины</h3>
@@ -500,12 +548,13 @@ permalink: /digital/
           Все данные собираются в едином, структурированном формате (как в приложении Forest Research). Это позволяет их легко анализировать, хранить и передавать, исключая ошибки и потерю информации.
         </p>
       </div>
-    </div>
-    
-    <div style="margin-top: var(--spacing-xl); background: var(--color-background); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-4-secondary);">
-        <p style="color: var(--color-dark-text); margin-top: var(--spacing-md); font-style: italic; border-left: 4px solid var(--color-accent); padding-left: var(--spacing-md);">
-        <strong style="color: var(--color-4-primary);">Честно о главном:</strong> Цифровизация — это процесс. Она требует первоначальных усилий по обучению и изменению привычек. Но на выходе вы получаете не просто «цифру», а инструмент для принятия более обоснованных управленческих решений и высвобождения времени вашей команды для содержательной работы. Я помогаю пройти этот путь с минимальным сопротивлением.
-      </p>
+      
+      <!-- Результат 5 -->
+      <div style="background: var(--color-background); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-4-secondary); grid-column: span 2;">
+        <p style="color: var(--color-dark-text); font-style: italic; border-left: 4px solid var(--color-accent); padding-left: var(--spacing-md);">
+          <strong style="color: var(--color-4-primary);">Честно о главном:</strong> Цифровизация — это процесс. Она требует первоначальных усилий по обучению и изменению привычек. Но на выходе вы получаете не просто «цифру», а инструмент для принятия более обоснованных управленческих решений и высвобождения времени вашей команды для содержательной работы. Я помогаю пройти этот путь с минимальным сопротивлением.
+        </p>
+      </div>
     </div>
   </div>
 </section>

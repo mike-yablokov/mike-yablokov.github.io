@@ -88,6 +88,23 @@ permalink: /education/
   }
 }
 
+/* Адаптация секции 9 (Результаты) */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+@media (max-width: 1024px) {
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .results-grid > div[style*="grid-column: span 2"] {
+    grid-column: span 1 !important;
+  }
+}
+
 /* Адаптация секции 7 (Процесс) */
 .process-grid {
   display: grid;
@@ -102,6 +119,37 @@ permalink: /education/
   
   .process-grid > div[style*="grid-column: span 2"] {
     grid-column: span 1 !important;
+  }
+}
+
+/* Адаптация подсекции 7.5.1 (Особый кейс - вступление) */
+.special-case-intro {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--spacing-md);
+}
+
+@media (max-width: 900px) {
+  .special-case-intro {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Адаптация заголовков подсекций особого кейса */
+.special-case-heading {
+  font-weight: 700;
+  font-size: 36px;
+}
+
+@media (max-width: 1024px) {
+  .special-case-heading {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .special-case-heading {
+    font-size: 22px;
   }
 }
 </style>
@@ -371,7 +419,7 @@ permalink: /education/
 <!-- 7.5.1. Заголовок + Подзаголовок + Фото -->
 <section id="kejs-5-0" style="padding: var(--spacing-lg) 0; background-color: var(--color-add-bg);">
   <div class="container">
-    <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: var(--spacing-md);">
+    <div class="special-case-intro">
       <!-- Текст слева -->
       <div>
         <h2 style="color: var(--color-5-primary); margin-bottom: var(--spacing-md);">
@@ -393,8 +441,8 @@ permalink: /education/
 <!-- 7.5.2. Вызов (Проблема «До») -->
 <section style="padding: var(--spacing-lg) 0; background-color: var(--color-background);">
   <div class="container">
-    <p style="color: var(--color-dark-text); font-size: var(--font-size-lg); line-height: 1.7;">
-      <span style="font-weight: 700; font-size: 36px; color: var(--color-5-primary);">Вызов:</span> В сфере управления природными территориями наблюдался образовательный вакуум. Специалисты приходили с узкопрофессиональными знаниями, но без понимания комплексного подхода к сохранению природы. Не существовало программ, которые объясняли бы, как интегрировать охрану территории, научные исследования, работу с людьми и развитие туризма в единую стратегию. Это приводило к фрагментарному управлению и потере преемственности опыта между поколениями специалистов.
+    <p style="color: var(--color-dark-text); line-height: 1.7;">
+      <span class="special-case-heading" style="color: var(--color-5-primary);">Вызов:</span> В сфере управления природными территориями наблюдался образовательный вакуум. Специалисты приходили с узкопрофессиональными знаниями, но без понимания комплексного подхода к сохранению природы. Не существовало программ, которые объясняли бы, как интегрировать охрану территории, научные исследования, работу с людьми и развитие туризма в единую стратегию. Это приводило к фрагментарному управлению и потере преемственности опыта между поколениями специалистов.
     </p>
   </div>
 </section>
@@ -402,19 +450,19 @@ permalink: /education/
 <!-- 7.5.3. Решение (Процесс) - ТЕМНЫЙ БЛОК -->
 <section style="padding: var(--spacing-lg) 0; background-color: var(--color-5-primary); color: var(--color-light-text);">
   <div class="container">
-    <p style="color: var(--color-light-text); font-size: var(--font-size-lg); line-height: 1.7; margin-bottom: var(--spacing-md);">
-      <span style="font-weight: 700; font-size: 36px; color: var(--color-accent);">Решение:</span> По инициативе «Школы защитников природы» я возглавил создание первой в России программы профессиональной переподготовки «Заповедное дело» с дипломом государственного образца. Моя задача заключалась в систематизации разрозненного опыта всей отрасли.
+    <p style="color: var(--color-light-text); line-height: 1.7; margin-bottom: var(--spacing-md);">
+      <span class="special-case-heading" style="color: var(--color-accent);">Решение:</span> По инициативе «Школы защитников природы» я возглавил создание первой в России программы профессиональной переподготовки «Заповедное дело» с дипломом государственного образца. Моя задача заключалась в систематизации разрозненного опыта всей отрасли.
     </p>
     
-    <p style="color: var(--color-light-text); font-size: var(--font-size-lg); line-height: 1.7; opacity: 0.95; margin-bottom: var(--spacing-md);">
+    <p style="color: var(--color-light-text); line-height: 1.7; opacity: 0.95; margin-bottom: var(--spacing-md);">
       <strong>Шаг 1: Создание каркаса знаний.</strong> Я проанализировал практический опыт и выделил ключевые дисциплины — от биологических основ территориальной охраны природы до управления репутацией ООПТ. Получилась целостная учебная система.
     </p>
     
-    <p style="color: var(--color-light-text); font-size: var(--font-size-lg); line-height: 1.7; opacity: 0.95; margin-bottom: var(--spacing-md);">
+    <p style="color: var(--color-light-text); line-height: 1.7; opacity: 0.95; margin-bottom: var(--spacing-md);">
       <strong>Шаг 2: Наполнение живым опытом.</strong> В программу были приглашены более 30 ведущих практиков из лучших ООПТ и НКО страны. Они наполнили систему конкретными кейсами, решениями и «неписаными» правилами профессии.
     </p>
     
-    <p style="color: var(--color-light-text); font-size: var(--font-size-lg); line-height: 1.7; opacity: 0.95;">
+    <p style="color: var(--color-light-text); line-height: 1.7; opacity: 0.95;">
       <strong>Шаг 3: Передача смысла, а не только навыков.</strong> Сердцем программы стал смысловой стержень. Через парадокс «Мы охраняем природу и от людей, и для людей» удалось раскрыть слушателям глубину и сложность их миссии, превращая набор должностных инструкций в осознанную профессию.
     </p>
   </div>
@@ -426,10 +474,10 @@ permalink: /education/
     <h3 style="text-align: center; color: var(--color-accent); margin-bottom: var(--spacing-md); font-size: var(--font-size-2xl);">
       Итог
     </h3>
-    <p style="color: var(--color-dark-text); font-size: var(--font-size-lg); line-height: 1.7; margin-bottom: var(--spacing-md);">
+    <p style="color: var(--color-dark-text); line-height: 1.7; margin-bottom: var(--spacing-md);">
       За два года программа выпустила свыше 120 дипломированных специалистов — в основном, действующих сотрудников ООПТ. Главным итогом стало не количество часов, а качественное изменение:
     </p>
-    <ul style="color: var(--color-dark-text); font-size: var(--font-size-lg); line-height: 1.8; list-style: none; padding: 0;">
+    <ul style="color: var(--color-dark-text); line-height: 1.8; list-style: none; padding: 0;">
       <li style="margin-bottom: var(--spacing-sm); padding-left: var(--spacing-lg); position: relative;">
         <span style="position: absolute; left: 0; color: var(--color-accent); font-weight: 700;">✓</span>
         <strong>Сформировано системное мышление.</strong> Слушатели получили не просто навыки, а целостное понимание своей работы через призму сохранения природы и взаимодействия с обществом.
@@ -449,7 +497,7 @@ permalink: /education/
 <!-- 7.5.5. Ценность для будущего клиента -->
 <section style="padding: var(--spacing-lg) 0; background-color: var(--color-add-bg);">
   <div class="container">
-    <p style="color: var(--color-dark-text); font-size: var(--font-size-xl); line-height: 1.7; font-weight: 500; text-align: left; font-style: italic; border-left: 4px solid var(--color-accent); padding-left: var(--spacing-lg);">
+    <p style="color: var(--color-dark-text); line-height: 1.7; font-weight: 500; text-align: left; font-style: italic; border-left: 4px solid var(--color-accent); padding-left: var(--spacing-lg);">
       Этот кейс — доказательство высшего уровня экспертизы в обучении. Если вам, будь то ВУЗ, корпоративный учебный центр или крупная территория, нужна не разовая лекция, а глубокое, системное влияние — я могу создать для вас такой же комплексный образовательный продукт. Я превращаю личный опыт и знания лучших практиков отрасли в структурированные программы, которые формируют не просто специалистов, а профессионалов с целостным видением. Это инвестиция не в отчётность, а в будущее вашей команды или проекта.
     </p>
   </div>
@@ -523,7 +571,7 @@ permalink: /education/
       Двойной эффект: для организатора обучения и для его слушателей
     </p>
     
-    <div class="grid grid-2" style="gap: var(--spacing-md);">
+    <div class="results-grid">
       <!-- Для организаторов -->
       <div style="background: var(--color-background); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-5-secondary);">
         <h3 style="color: var(--color-5-primary); margin-bottom: var(--spacing-md);">Для организаторов (вуз, компания, ООПТ)</h3>
@@ -543,12 +591,13 @@ permalink: /education/
           <li><strong>Инструменты для реальных проектов</strong> — Умение разрабатывать стратегии, проводить исследования, создавать туристические концепции — то, что можно применить сразу после обучения.</li>
         </ul>
       </div>
-    </div>
-    
-    <div style="margin-top: var(--spacing-xl); background: var(--color-background); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-5-secondary);">
-        <p style="color: var(--color-dark-text); margin-top: var(--spacing-md); font-style: italic; border-left: 4px solid var(--color-accent); padding-left: var(--spacing-md);">
-        <strong style="color: var(--color-5-primary);">Честно о главном:</strong> Моё обучение даёт две вещи: прочный фундамент и инструменты для строительства. Фундамент — это глубокое понимание смысла заповедного дела, система ценностей и профессиональное мировоззрение. Инструменты — это конкретные методики и навыки для ежедневной работы. С фундаментом вы не развалитесь под нагрузкой, а с инструментами — сможете построить что угодно.
-      </p>
+      
+      <!-- Результат 3 -->
+      <div style="background: var(--color-background); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-5-secondary); grid-column: span 2;">
+        <p style="color: var(--color-dark-text); font-style: italic; border-left: 4px solid var(--color-accent); padding-left: var(--spacing-md);">
+          <strong style="color: var(--color-5-primary);">Честно о главном:</strong> Моё обучение даёт две вещи: прочный фундамент и инструменты для строительства. Фундамент — это глубокое понимание смысла заповедного дела, система ценностей и профессиональное мировоззрение. Инструменты — это конкретные методики и навыки для ежедневной работы. С фундаментом вы не развалитесь под нагрузкой, а с инструментами — сможете построить что угодно.
+        </p>
+      </div>
     </div>
   </div>
 </section>

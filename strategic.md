@@ -70,6 +70,37 @@ permalink: /strategic/
     align-items: center;
   }
 }
+
+/* Адаптация подсекции 7.5.1 (Особый кейс - вступление) */
+.special-case-intro {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--spacing-md);
+}
+
+@media (max-width: 900px) {
+  .special-case-intro {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Адаптация заголовков подсекций особого кейса */
+.special-case-heading {
+  font-weight: 700;
+  font-size: 36px;
+}
+
+@media (max-width: 1024px) {
+  .special-case-heading {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .special-case-heading {
+    font-size: 22px;
+  }
+}
 </style>
 
 <!-- 1. HERO-СЕКЦИЯ -->
@@ -342,7 +373,7 @@ permalink: /strategic/
 <!-- 7.5.1. Заголовок + Подзаголовок + Фото -->
 <section id="kejs-1-0" style="padding: var(--spacing-lg) 0; background-color: var(--color-add-bg);">
   <div class="container">
-    <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: var(--spacing-md);">
+    <div class="special-case-intro">
       <!-- Текст слева -->
       <div>
         <h2 style="color: var(--color-1-primary); margin-bottom: var(--spacing-md);">
@@ -364,8 +395,8 @@ permalink: /strategic/
 <!-- 7.5.2. Вызов (Проблема «До») -->
 <section style="padding: var(--spacing-lg) 0; background-color: var(--color-background);">
   <div class="container">
-    <p style="color: var(--color-dark-text); font-size: var(--font-size-lg); line-height: 1.7;">
-      <span style="font-weight: 700; font-size: 36px; color: var(--color-1-primary);">Вызов:</span> Дирекция ООПТ Санкт-Петербурга — прогрессивное казённое учреждение с молодым коллективом, сформированным после реструктуризации. Все сотрудники — сильные специалисты, но каждый работал в своём направлении. Отсутствовал общий язык и ясное понимание целей, что приводило к выгоранию и потере смысла в работе. Противоречия между задачами охраны природы и развития туризма блокировали возможность содержательных стратегических обсуждений.
+    <p style="color: var(--color-dark-text); line-height: 1.7;">
+      <span class="special-case-heading" style="color: var(--color-1-primary);">Вызов:</span> Дирекция ООПТ Санкт-Петербурга — прогрессивное казённое учреждение с молодым коллективом, сформированным после реструктуризации. Все сотрудники — сильные специалисты, но каждый работал в своём направлении. Отсутствовал общий язык и ясное понимание целей, что приводило к выгоранию и потере смысла в работе. Противоречия между задачами охраны природы и развития туризма блокировали возможность содержательных стратегических обсуждений.
     </p>
   </div>
 </section>
@@ -373,11 +404,11 @@ permalink: /strategic/
 <!-- 7.5.3. Решение (Процесс) - ТЕМНЫЙ БЛОК -->
 <section style="padding: var(--spacing-lg) 0; background-color: var(--color-1-primary); color: var(--color-light-text);">
   <div class="container">
-    <p style="color: var(--color-light-text); font-size: var(--font-size-lg); line-height: 1.7; margin-bottom: var(--spacing-md);">
-      <span style="font-weight: 700; font-size: 36px; color: var(--color-accent);">Решение:</span> Я разработал и провёл интенсивную месячную программу, включавшую две недели подготовки и две поездки в Санкт-Петербург. Моя задача состояла не в том, чтобы дать готовые ответы, а в том, чтобы организовать процесс, в ходе которого команда сама пришла к согласованным решениям.
+    <p style="color: var(--color-light-text); line-height: 1.7; margin-bottom: var(--spacing-md);">
+      <span class="special-case-heading" style="color: var(--color-accent);">Решение:</span> Я разработал и провёл интенсивную месячную программу, включавшую две недели подготовки и две поездки в Санкт-Петербург. Моя задача состояла не в том, чтобы дать готовые ответы, а в том, чтобы организовать процесс, в ходе которого команда сама пришла к согласованным решениям.
     </p>
     
-    <p style="color: var(--color-light-text); font-size: var(--font-size-lg); line-height: 1.7; opacity: 0.95;">
+    <p style="color: var(--color-light-text); line-height: 1.7; opacity: 0.95;">
       Первый день был посвящён диалоговым семинарам на языке, понятном участникам, и позволил преодолеть первоначальный скепсис. На второй день, в ходе тренингов, команда сформулировала общие ценности и миссию, отвечая на сложные вопросы, а не получая их извне — моя роль сводилась к слушанию, структурированию и направлению дискуссии. В третий день прошла стратегическая сессия, в которой коллектив определил приоритетные направления развития, опираясь на сформированное видение и осознание ключевых проблем. На четвёртый день, уже на волне доверия и ясности, команда совместно определила стратегические задачи на год с учётом реальных ресурсов, сроков и ответственных. Каждый понимает свой вклад и как он связан с общей целью.
     </p>
   </div>
@@ -389,7 +420,7 @@ permalink: /strategic/
     <h3 style="text-align: center; color: var(--color-accent); margin-bottom: var(--spacing-md); font-size: var(--font-size-2xl);">
       Итог
     </h3>
-    <ul style="color: var(--color-dark-text); font-size: var(--font-size-lg); line-height: 1.8; list-style: none; padding: 0;">
+    <ul style="color: var(--color-dark-text); line-height: 1.8; list-style: none; padding: 0;">
       <li style="margin-bottom: var(--spacing-sm); padding-left: var(--spacing-lg); position: relative;">
         <span style="position: absolute; left: 0; color: var(--color-accent); font-weight: 700;">✓</span>
         Появилась настоящая команда с сформулированными ценностями, общим видением и языком.
@@ -413,7 +444,7 @@ permalink: /strategic/
 <!-- 7.5.5. Ценность для будущего клиента -->
 <section style="padding: var(--spacing-lg) 0; background-color: var(--color-add-bg);">
   <div class="container">
-    <p style="color: var(--color-dark-text); font-size: var(--font-size-xl); line-height: 1.7; font-weight: 500; text-align: left; font-style: italic; border-left: 4px solid var(--color-accent); padding-left: var(--spacing-lg);">
+    <p style="color: var(--color-dark-text); line-height: 1.7; font-weight: 500; text-align: left; font-style: italic; border-left: 4px solid var(--color-accent); padding-left: var(--spacing-lg);">
       Этот кейс — доказательство универсального алгоритма. Он работает как для создания нового направления с нуля, так и для запуска «буксующего» проекта. Моя фасилитация — это короткий путь к успеху: я помогаю вашей команде быстро преодолеть разобщённость и выработать собственные, поддержанные всеми решения, которые будут реально исполняться.
     </p>
   </div>

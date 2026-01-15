@@ -56,6 +56,55 @@ permalink: /
     font-size: var(--font-size-lg) !important;
   }
 }
+
+/* Адаптация секции 2 (Моя экспертиза) */
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+@media (max-width: 1024px) {
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .expertise-grid > div[style*="grid-column"] {
+    grid-column: span 1 !important;
+  }
+}
+
+/* Адаптация секции 6 (Реализованные проекты) */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+}
+
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Адаптация секции 8 (Как я работаю) */
+.process-grid-main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-lg);
+}
+
+@media (max-width: 1024px) {
+  .process-grid-main {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 
 <section class="hero-section hero-main">
@@ -86,7 +135,7 @@ permalink: /
       12 лет я руководил федеральными ООПТ, а последние 7 лет помогаю организациям как внешний эксперт. Моя сила — в умении быть «переводчиком» между мирами.
     </p>
     
-    <div class="grid grid-2" style="margin-top: calc(var(--spacing-xl) / 2);">
+    <div class="expertise-grid" style="margin-top: calc(var(--spacing-xl) / 2);">
       <div style="background: var(--color-add-bg); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-m-secondary);">
         <h3 style="color: var(--color-m-primary); margin-bottom: var(--spacing-sm);">Опыт «изнутри системы»</h3>
         <p style="color: var(--color-dark-text);">Знаю бюджетные и бюрократические реалии ФГБУ и госорганов изнутри. Это позволяет создавать реализуемые стратегии.</p>
@@ -136,17 +185,39 @@ permalink: /
 .problems-grid > div {
   /* По умолчанию карточки занимают указанные колонки */
 }
-@media (max-width: 1500px) {
+.problems-grid > div.problem-card-1,
+.problems-grid > div.problem-card-2,
+.problems-grid > div.problem-card-3 {
+  grid-column: span 2;
+}
+.problems-grid > div.problem-card-4,
+.problems-grid > div.problem-card-last {
+  grid-column: span 3;
+}
+@media (min-width: 769px) and (max-width: 1500px) {
   .problems-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .problems-grid > div {
+  .problems-grid > div.problem-card-1,
+  .problems-grid > div.problem-card-2,
+  .problems-grid > div.problem-card-3,
+  .problems-grid > div.problem-card-4 {
     grid-column: span 1 !important;
+  }
+  .problems-grid > div.problem-card-last {
+    grid-column: span 2 !important;
   }
 }
 @media (max-width: 768px) {
   .problems-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+  }
+  .problems-grid > div.problem-card-1,
+  .problems-grid > div.problem-card-2,
+  .problems-grid > div.problem-card-3,
+  .problems-grid > div.problem-card-4,
+  .problems-grid > div.problem-card-last {
+    grid-column: span 1 !important;
   }
 }
 </style>
@@ -162,7 +233,7 @@ permalink: /
     
     <div class="problems-grid">
       <!-- Карточка 1: Стратегия -->
-      <div style="background: var(--color-background); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-m-secondary); grid-column: span 2;">
+      <div class="problem-card-1" style="background: var(--color-background); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-m-secondary);">
         <h3 style="color: var(--color-m-primary); margin-bottom: var(--spacing-sm);">Стратегии остаются на бумаге</h3>
         <p style="color: var(--color-dark-text); font-weight: 600; margin-bottom: var(--spacing-xs);"><strong>Проблема:</strong></p>
         <p style="color: var(--color-dark-text); margin-bottom: var(--spacing-sm);">Стратегии остаются на бумаге, команда разобщена, ресурсы распыляются.</p>
@@ -173,7 +244,7 @@ permalink: /
       </div>
       
       <!-- Карточка 2: Цифровизация -->
-      <div style="background: var(--color-background); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-m-secondary); grid-column: span 2;">
+      <div class="problem-card-2" style="background: var(--color-background); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-m-secondary);">
         <h3 style="color: var(--color-m-primary); margin-bottom: var(--spacing-sm);">Данные в хаосе<br><br></h3>
         <p style="color: var(--color-dark-text); font-weight: 600; margin-bottom: var(--spacing-xs);"><strong>Проблема:</strong></p>
         <p style="color: var(--color-dark-text); margin-bottom: var(--spacing-sm);">Данные в хаосе, сотрудники боятся технологий, а отчетность отнимает недели.</p>
@@ -184,7 +255,7 @@ permalink: /
       </div>
       
       <!-- Карточка 3: Туризм -->
-      <div style="background: var(--color-background); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-m-secondary); grid-column: span 2;">
+      <div class="problem-card-3" style="background: var(--color-background); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-m-secondary);">
         <h3 style="color: var(--color-m-primary); margin-bottom: var(--spacing-sm);">Неясно, как развивать туризм</h3>
         <p style="color: var(--color-dark-text); font-weight: 600; margin-bottom: var(--spacing-xs);"><strong>Проблема:</strong></p>
         <p style="color: var(--color-dark-text); margin-bottom: var(--spacing-sm);">Неясно, как развивать туризм, не навредив природе и не вызвав конфликтов.</p>
@@ -195,7 +266,7 @@ permalink: /
       </div>
       
       <!-- Карточка 4: Взаимодействие с сообществом -->
-      <div style="background: var(--color-background); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-m-secondary); grid-column: span 3;">
+      <div class="problem-card-4" style="background: var(--color-background); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-m-secondary);">
         <h3 style="color: var(--color-m-primary); margin-bottom: var(--spacing-sm);">Непонимание настроений местных жителей</h3>
         <p style="color: var(--color-dark-text); font-weight: 600; margin-bottom: var(--spacing-xs);"><strong>Проблема:</strong></p>
         <p style="color: var(--color-dark-text); margin-bottom: var(--spacing-sm);">Непонимание реальных настроений и интересов людей на территории ведет к рискам и сопротивлению проектам.</p>
@@ -206,8 +277,8 @@ permalink: /
       </div>
       
       <!-- Карточка 5: Обучение -->
-      <div style="background: var(--color-background); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-m-secondary); grid-column: span 3;">
-        <h3 style="color: var(--color-m-primary); margin-bottom: var(--spacing-sm);">Нет практического обучения<br><br></h3>
+      <div class="problem-card-last" style="background: var(--color-background); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-m-secondary);">
+        <h3 style="color: var(--color-m-primary); margin-bottom: var(--spacing-sm);">Нет практического обучения</h3>
         <p style="color: var(--color-dark-text); font-weight: 600; margin-bottom: var(--spacing-xs);"><strong>Проблема:</strong></p>
         <p style="color: var(--color-dark-text); margin-bottom: var(--spacing-sm);">Нет качественного практического обучения на стыке экологии, управления и коммуникаций для работы с территориями.</p>
         <p style="color: var(--color-dark-text); font-weight: 600; margin-bottom: var(--spacing-xs);"><strong>Последствие:</strong></p>
@@ -568,7 +639,7 @@ permalink: /
       Гибкая схема, которая адаптируется под ваш запрос — от разовой сессии до годового сопровождения.
     </p>
     
-    <div class="grid grid-2" style="gap: var(--spacing-lg);">
+    <div class="process-grid-main">
       <!-- Этап 1 -->
       <div style="background: var(--color-add-bg); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-accent); position: relative;">
         <div style="position: absolute; top: var(--spacing-md); left: var(--spacing-md); background: var(--color-accent); color: var(--color-light-text); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: var(--font-size-lg);">1</div>
