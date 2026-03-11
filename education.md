@@ -274,7 +274,7 @@ permalink: /education/
     </div>
     
     <p style="text-align: center; font-size: var(--font-size-lg); color: var(--color-dark-text); margin-top: calc(var(--spacing-xl) / 2); max-width: 900px; margin-left: auto; margin-right: auto;">
-      <strong style="color: var(--color-accent);">Решение</strong> — в практических программах от эксперта, который знает и бизнес-логику, и природоохранную специфику. Я создаю обучение, которое формирует не просто знания, а систему профессионального мышления для работы в сложных условиях.
+      <strong style="color: var(--color-accent);">Решение</strong> — практические программы от эксперта, который знает и бизнес-логику, и природоохранную специфику. Я создаю обучение, которое формирует не просто знания, а систему профессионального мышления для работы в сложных условиях.
     </p>
   </div>
 </section>
@@ -286,7 +286,7 @@ permalink: /education/
       Обучение — это инвестиция в будущее отрасли
     </h3>
     <blockquote style="font-size: var(--font-size-xl); line-height: 1.6; font-style: italic; border-right: 4px solid var(--color-add-acc); padding-right: var(--spacing-lg); margin: 0; text-align: right;">
-      Лучшие проекты, связанные с природой, учитывают и экологические, и социальные цели. Такое балансирование — это не навык из учебника, а сложное искусство.<br>Моя задача — передать его философию и дать инструменты для реализации.
+      Лучшие проекты, связанные с природой, учитывают и экологические, и социальные цели. Такое балансирование — это не глава из учебника, а сложное искусство.<br>Моя задача — передать его философию и дать инструменты для реализации.
     </blockquote>
   </div>
 </section>
@@ -349,7 +349,7 @@ permalink: /education/
       Как строится сотрудничество в сфере обучения?
     </h2>
     <p style="text-align: center; font-size: var(--font-size-lg); color: var(--color-5-secondary); margin-bottom: 50px; max-width: 900px; margin-left: auto; margin-right: auto;">
-      Гибкий подход под задачи заказчика: от отдельной лекции или модуля до полноценной образовательной программы
+      Гибкий подход к задачам заказчика: от отдельной лекции или модуля до полноценной образовательной программы
     </p>
     
     <div class="process-grid">
@@ -410,7 +410,7 @@ permalink: /education/
     </div>
     
     <p style="text-align: center; font-size: var(--font-size-lg); color: var(--color-dark-text); margin-top: calc(var(--spacing-xl) / 2); max-width: 1200px; margin-left: auto; margin-right: auto;">
-      <strong style="color: var(--color-accent);">Формат и сроки:</strong> Крайне гибкие. От 2-дневного воркшопа до 9-месячной программы профессиональной переподготовки.
+      <strong style="color: var(--color-accent);">Формат и сроки:</strong> От 2-дневного воркшопа до 9-месячной программы профессиональной переподготовки.
     </p>
   </div>
 </section>
@@ -451,7 +451,7 @@ permalink: /education/
 <section style="padding: var(--spacing-lg) 0; background-color: var(--color-5-primary); color: var(--color-light-text);">
   <div class="container">
     <p style="color: var(--color-light-text); line-height: 1.7; margin-bottom: var(--spacing-md);">
-      <span class="special-case-heading" style="color: var(--color-accent);">Решение:</span> По инициативе «Школы защитников природы» я возглавил создание первой в России программы профессиональной переподготовки «Заповедное дело» с дипломом государственного образца. Моя задача заключалась в систематизации разрозненного опыта всей отрасли.
+      <span class="special-case-heading" style="color: var(--color-accent);">Решение:</span> Первая в России программа профессиональной переподготовки «Заповедное дело» с дипломом государственного образца, разработку которой я возглавил по инициативе «Школы защитников природы». Моя задача заключалась в систематизации разрозненного опыта всей отрасли.
     </p>
     
     <p style="color: var(--color-light-text); line-height: 1.7; opacity: 0.95; margin-bottom: var(--spacing-md);">
@@ -611,7 +611,7 @@ permalink: /education/
     <p style="font-size: var(--font-size-lg); margin-bottom: var(--spacing-lg); opacity: 0.9; line-height: 1.8;">
       Опишите вашу задачу: разработка курса для вуза, модуль для корпоративного обучения, программа повышения квалификации для команды. Я изучу запрос и предложу варианты, как мой опыт и наработки могут быть трансформированы в эффективную обучающую программу для вас.
     </p>
-    <a href="mailto:ymike@mail.ru" class="btn btn-primary" style="font-size: var(--font-size-lg); padding: var(--spacing-md) var(--spacing-xl);">
+    <a href="#consult-modal" class="btn btn-primary js-open-consult-modal" style="font-size: var(--font-size-lg); padding: var(--spacing-md) var(--spacing-xl);">
       Записаться на консультацию
     </a>
   </div>

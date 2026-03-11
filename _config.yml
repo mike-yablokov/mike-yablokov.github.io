@@ -7,18 +7,15 @@ author: "Михаил Яблоков"
 url: "https://ymike.ru"
 baseurl: ""
 
+# ID счётчика Яндекс.Метрики (задайте реальный ID в будущем)
+metrika_id: "92922877"
+
 # Build настройки
 markdown: kramdown
 permalink: pretty  # Красивые URL без .html
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
-
-# Коллекция для кейсов
-collections:
-  cases:
-    output: false  # Кейсы не генерируют отдельные страницы, только модальные окна
-    permalink: /cases/:name/
 
 # Exclude файлы от сборки
 exclude:

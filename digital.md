@@ -185,7 +185,7 @@ permalink: /digital/
     <div class="grid grid-2" style="gap: var(--spacing-md); margin-top: calc(var(--spacing-xl) / 2);">
       <div style="background: var(--color-add-bg); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-4-secondary);">
         <p style="color: var(--color-dark-text); line-height: 1.7;">
-          Сотрудники боятся технологий, а процессы на бумаге? Внедрю и адаптирую системы цифрового управления под ваши задачи, сократив время на отчетность в 20 раз.
+          Сотрудники боятся технологий, а процессы на бумаге? Внедрю и адаптирую системы цифрового управления под ваши задачи, сокращая время на отчетность в разы.
         </p>
       </div>
       
@@ -263,7 +263,7 @@ permalink: /digital/
       Кто может стать мостом между миром охраны природы и миром IT?
     </h3>
     <blockquote style="font-size: var(--font-size-xl); line-height: 1.6; font-style: italic; border-left: 4px solid var(--color-add-acc); padding-left: var(--spacing-lg); margin: 0;">
-      Тот, кто жил в обоих мирах. 12 лет я руководил заповедниками и нацпарками и знаю изнутри, как собираются данные в поле, как пишутся отчёты и где главные «узкие места». Потом я целенаправленно освоил современные IT-инструменты (ГИС, серверные решения, мобильную разработку), чтобы автоматизировать именно эти процессы. Я говорю на двух языках.
+      Тот, кто жил в обоих мирах. 12 лет я руководил заповедниками и нацпарками и знаю изнутри, как собираются данные в поле, как пишутся отчёты и где главные «узкие места». Потом я целенаправленно освоил современные IT-инструменты (ГИС, серверные решения, мобильную разработку), чтобы автоматизировать именно эти процессы. Я говорю на обоих языках.
     </blockquote>
   </div>
 </section>
@@ -279,14 +279,14 @@ permalink: /digital/
       <div style="background: var(--color-add-bg); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-4-secondary);">
         <h3 style="color: var(--color-4-primary); margin-bottom: var(--spacing-sm);">Бывший директор ООПТ</h3>
         <p style="color: var(--color-dark-text);">
-          Я не теоретик. Я знаю бюджетные, кадровые и бюрократические реалии госучреждений. Все предлагаемые решения изначально проверяю на реализуемость в ваших условиях.
+          Я практик. Я знаю бюджетные, кадровые и бюрократические реалии госучреждений. Все предлагаемые решения изначально проверяю на реализуемость в ваших условиях.
         </p>
       </div>
       
       <div style="background: var(--color-add-bg); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-4-secondary);">
         <h3 style="color: var(--color-4-primary); margin-bottom: var(--spacing-sm);">IT для задач, а не наоборот</h3>
         <p style="color: var(--color-dark-text);">
-          Я не начинаю с продажи «модной» технологии. Я начинаю с анализа вашей конкретной задачи (патрулирование, учёт птиц, мониторинг нарушений или выдача разрешений) и подбираю или настраиваю инструмент под неё.
+          Я начинаю работу с анализа вашей конкретной задачи (патрулирование, учёт птиц, мониторинг нарушений или выдача разрешений) и подбираю или настраиваю инструмент под неё.
         </p>
       </div>
       
@@ -358,7 +358,7 @@ permalink: /digital/
         <div style="padding-left: 60px;">
           <h3 style="color: var(--color-4-primary); margin-bottom: var(--spacing-sm);">Пилотное внедрение и обучение</h3>
           <p style="color: var(--color-dark-text);">
-            Внедряем решение для одного отдела или на одном участке. Провожу обучающие семинары для сотрудников, делаю инструкции «для чайников».
+            Внедряем решение для одного отдела или на одном участке. Провожу обучающие семинары для сотрудников, делаю простые и понятные инструкции.
           </p>
         </div>
       </div>
@@ -417,7 +417,7 @@ permalink: /digital/
 <section style="padding: var(--spacing-lg) 0; background-color: var(--color-4-primary); color: var(--color-light-text);">
   <div class="container">
     <p style="color: var(--color-light-text); line-height: 1.7; margin-bottom: var(--spacing-md);">
-      <span class="special-case-heading" style="color: var(--color-accent);">Решение:</span> Я выступаю как проводник между миром охраны природы и миром IT. Моя задача — не продать «модную систему», а решить ваши конкретные операционные проблемы.
+      <span class="special-case-heading" style="color: var(--color-accent);">Решение:</span> Я выступаю как проводник между миром охраны природы и миром IT. Подбираю такой инструмент, который сможет решить ваши конкретные операционные проблемы при минимальных затратах ресурсов.
     </p>
     
     <p style="color: var(--color-light-text); line-height: 1.7; opacity: 0.95; margin-bottom: var(--spacing-md);">
@@ -477,7 +477,7 @@ permalink: /digital/
       Цифровизация, которая работает: от госучреждений до бизнеса
     </h2>
     <p style="text-align: center; font-size: var(--font-size-lg); opacity: 0.8; margin-bottom: 50px; max-width: 900px; margin-left: auto; margin-right: auto;">
-      Реальные проекты в разных регионах России, где внедрение цифровых инструментов решило операционные задачи и сократило время на рутину в 15-20 раз. Каждый кейс начинался с понимания специфики задачи, а не с выбора технологии.
+      Реальные проекты в разных регионах России, где внедрение цифровых инструментов решило операционные задачи и сократило время на рутину в несколько раз. Каждый кейс начинался с понимания специфики задачи, а не с выбора технологии.
     </p>
     
     <div class="grid grid-3" style="gap: var(--spacing-md);">
@@ -568,7 +568,7 @@ permalink: /digital/
     <p style="font-size: var(--font-size-lg); margin-bottom: var(--spacing-lg); opacity: 0.9; line-height: 1.8;">
       Опишите, что вы хотите улучшить: учёт животных, работу инспекторов, выдачу разрешений посетителям с контролем антропогенной нагрузки, анализ данных или отчётность. Я изучу запрос и предложу IT-решение, которое будет работать в условиях вашей территории.
     </p>
-    <a href="mailto:ymike@mail.ru" class="btn btn-primary" style="font-size: var(--font-size-lg); padding: var(--spacing-md) var(--spacing-xl);">
+    <a href="#consult-modal" class="btn btn-primary js-open-consult-modal" style="font-size: var(--font-size-lg); padding: var(--spacing-md) var(--spacing-xl);">
       Записаться на консультацию
     </a>
   </div>

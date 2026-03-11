@@ -34,9 +34,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Smooth scroll for anchor links
+// Smooth scroll for anchor links (кроме элементов, которые открывают модальное окно)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
+    if (this.classList.contains('js-open-consult-modal')) {
+      return;
+    }
     e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
@@ -48,7 +51,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Индикатор ширины окна (временный, для отладки адаптации)
+/* Индикатор ширины окна (временный для отладки адаптации) отключён
 function updateWidthIndicator() {
   let indicator = document.getElementById('width-indicator');
   if (!indicator) {
@@ -73,9 +76,9 @@ function updateWidthIndicator() {
   indicator.textContent = width + 'px';
 }
 
-// Обновляем при загрузке и изменении размера окна
 window.addEventListener('load', updateWidthIndicator);
 window.addEventListener('resize', updateWidthIndicator);
+*/
 
 // Автоматическая прокрутка к якорю при загрузке страницы (для кейсов с "0")
 window.addEventListener('load', function() {
@@ -97,4 +100,56 @@ window.addEventListener('load', function() {
       }
     }, 300);
   }
+});
+
+// Модальное окно записи на консультацию (Getform)
+document.addEventListener('DOMContentLoaded', () => {
+  const consultOverlay = document.getElementById('consult-modal-overlay');
+  const openButtons = document.querySelectorAll('.js-open-consult-modal');
+  const closeButtons = document.querySelectorAll('.consult-modal-close');
+
+  if (!consultOverlay || openButtons.length === 0) {
+    return;
+  }
+
+  const openConsultModal = () => {
+    consultOverlay.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeConsultModal = () => {
+    consultOverlay.style.display = 'none';
+    document.body.style.overflow = '';
+    // Сброс формы Яндекс: перезагружаем iframe, чтобы при следующем открытии показывалась пустая форма
+    const yaFrame = document.querySelector('iframe[name="ya-form-69b1b47ee010db5db2fe4612"]');
+    if (yaFrame && yaFrame.src) {
+      yaFrame.src = yaFrame.src;
+    }
+  };
+
+  openButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openConsultModal();
+    });
+  });
+
+  closeButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      closeConsultModal();
+    });
+  });
+
+  consultOverlay.addEventListener('click', (e) => {
+    if (e.target === consultOverlay) {
+      closeConsultModal();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && consultOverlay.style.display === 'flex') {
+      closeConsultModal();
+    }
+  });
 });

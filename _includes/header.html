@@ -1,3 +1,8 @@
+{% assign nav_base = '' %}
+{% if page.url contains '/en/' %}
+  {% assign nav_base = '/en' %}
+{% endif %}
+
 <header class="header">
   <div class="header-content">
     <!-- Логотип / Имя -->
@@ -7,27 +12,33 @@
     <nav class="nav" aria-label="Основная навигация">
       <ul class="nav-list">
         <li class="nav-item">
-          <a href="{{ '/strategic/' | relative_url }}" class="nav-link">Стратегии<br>устойчивости</a>
+          <a href="{{ nav_base | append: '/strategic/' | relative_url }}" class="nav-link">Стратегии<br>устойчивости</a>
         </li>
         <li class="nav-item">
-          <a href="{{ '/social/' | relative_url }}" class="nav-link">Социальные<br>решения</a>
+          <a href="{{ nav_base | append: '/social/' | relative_url }}" class="nav-link">Социальные<br>решения</a>
         </li>
         <li class="nav-item">
-          <a href="{{ '/tourism/' | relative_url }}" class="nav-link">Природный<br>туризм</a>
+          <a href="{{ nav_base | append: '/tourism/' | relative_url }}" class="nav-link">Природный<br>туризм</a>
         </li>
         <li class="nav-item">
-          <a href="{{ '/digital/' | relative_url }}" class="nav-link">Цифровые<br>решения</a>
+          <a href="{{ nav_base | append: '/digital/' | relative_url }}" class="nav-link">Цифровые<br>решения</a>
         </li>
         <li class="nav-item">
-          <a href="{{ '/education/' | relative_url }}" class="nav-link">Развитие<br>команд</a>
+          <a href="{{ nav_base | append: '/education/' | relative_url }}" class="nav-link">Развитие<br>команд</a>
         </li>
       </ul>
     </nav>
     
-    <!-- Переключатель языков (пока неактивный) -->
+    {% assign ru_url = page.url %}
+    {% assign en_url = '/en' | append: page.url %}
+    {% if page.url contains '/en/' %}
+      {% assign ru_url = page.url | remove_first: '/en' %}
+      {% assign en_url = page.url %}
+    {% endif %}
+    <!-- Переключатель языков -->
     <div class="lang-switcher">
-      <button class="lang-btn active" aria-label="Русская версия" aria-current="true">RU</button>
-      <button class="lang-btn" aria-label="English version" disabled>EN</button>
+      <a href="{{ ru_url | relative_url }}" class="lang-btn{% unless page.url contains '/en/' %} active{% endunless %}" aria-label="Русская версия"{% unless page.url contains '/en/' %} aria-current="true"{% endunless %}>RU</a>
+      <a href="{{ en_url | relative_url }}" class="lang-btn{% if page.url contains '/en/' %} active{% endif %}" aria-label="English version"{% if page.url contains '/en/' %} aria-current="true"{% endif %}>EN</a>
     </div>
     
     <!-- Мобильная кнопка меню -->

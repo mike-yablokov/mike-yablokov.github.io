@@ -117,7 +117,7 @@ permalink: /
       Развиваю природные территории и команды
     </h1>
     <p style="font-size: var(--font-size-xl); margin-bottom: var(--spacing-lg); opacity: 0.9; line-height: 1.6;">
-      Помогаю бизнесу, регионам и ООПТ находить баланс между охраной природы, экономикой и интересами людей. Кандидат биологических наук, 12 лет руководил заповедниками.
+      Помогаю бизнесу, регионам и заповедным территориям находить баланс между охраной природы, экономикой и интересами людей. Кандидат биологических наук, 12 лет руководил заповедниками.
     </p>
     <a href="#contact" class="btn btn-primary" style="font-size: var(--font-size-lg); padding: var(--spacing-md) var(--spacing-lg);">
       Обсудить ваш кейс
@@ -132,7 +132,7 @@ permalink: /
       Почему мои решения работают там,<br>где другие видят тупик?
     </h2>
     <p style="text-align: center; font-size: var(--font-size-lg); color: var(--color-m-secondary); margin-bottom: 30px; max-width: 900px; margin-left: auto; margin-right: auto;">
-      12 лет я руководил федеральными ООПТ, а последние 7 лет помогаю организациям как внешний эксперт. Моя сила — в умении быть «переводчиком» между мирами.
+      12 лет я руководил федеральными ООПТ, а последние 7 лет помогаю организациям как внешний эксперт. Моя сила — в умении быть «переводчиком» между мирами охраны природы и бизнеса.
     </p>
     
     <div class="expertise-grid" style="margin-top: calc(var(--spacing-xl) / 2);">
@@ -148,11 +148,11 @@ permalink: /
       
       <div style="background: var(--color-add-bg); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-m-secondary);">
         <h3 style="color: var(--color-m-primary); margin-bottom: var(--spacing-sm);">Практик, а не теоретик</h3>
-        <p style="color: var(--color-dark-text);">Все инструменты проверены в полевых условиях — от Териберки до Кыргызстана. Даю не отчёт, а дорожную карту.</p>
+        <p style="color: var(--color-dark-text);">Все инструменты проверены в полевых условиях — от Териберки до Камчатки. Даю не отчёт, а дорожную карту.</p>
       </div>
       
       <div style="background: var(--color-add-bg); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-m-secondary);">
-        <h3 style="color: var(--color-m-primary); margin-bottom: var(--spacing-sm);">Фасилитация, а не навязывание</h3>
+        <h3 style="color: var(--color-m-primary); margin-bottom: var(--spacing-sm);">Работаю с вашей командой, а не вместо неё</h3>
         <p style="color: var(--color-dark-text);">Вовлекаю вашу команду в процесс, чтобы решение было вашим, а поддержка — всеобщей.</p>
       </div>
       
@@ -701,7 +701,7 @@ permalink: /
       Забронируйте онлайн-консультацию. Я проанализирую Вашу ситуацию и предложу варианты и принципиальный план работы. Это разговор между экспертами, который ни к чему Вас не обязывает.
     </p>
     <div style="display: flex; gap: var(--spacing-md); justify-content: center; flex-wrap: wrap;">
-      <a href="mailto:ymike@mail.ru" class="btn btn-primary" style="font-size: var(--font-size-lg); padding: var(--spacing-md) var(--spacing-xl);">
+      <a href="#consult-modal" class="btn btn-primary js-open-consult-modal" style="font-size: var(--font-size-lg); padding: var(--spacing-md) var(--spacing-xl);">
         Записаться на консультацию
       </a>
       <a href="{{ '/pdfs/ruYablokovCV.pdf' | relative_url }}" target="_blank" class="btn btn-secondary btn-cv-hover" style="font-size: var(--font-size-lg); padding: var(--spacing-md) var(--spacing-xl); background: transparent; border: 2px solid var(--color-light-text); color: var(--color-light-text);">

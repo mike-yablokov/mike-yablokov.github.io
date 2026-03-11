@@ -163,7 +163,7 @@ permalink: /strategic/
       
       <div style="background: var(--color-add-bg); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-1-secondary);">
         <p style="color: var(--color-dark-text); line-height: 1.7;">
-          Ваша организация работает с территориями? Превращу разрозненные инициативы в единую стратегию для повышения эффективности проектов и доверия доноров.
+          Ваша организация работает с территориями? Помогу собрать разрозненные инициативы в единую стратегию для повышения эффективности проектов и доверия доноров.
         </p>
       </div>
       
@@ -346,7 +346,7 @@ permalink: /strategic/
         <div style="padding-left: 60px;">
           <h3 style="color: var(--color-1-primary); margin-bottom: var(--spacing-sm);">Поддержка внедрения</h3>
           <p style="color: var(--color-dark-text);">
-            При необходимости помогаю запустить стратегию в работу: адаптирую формат планерок, настраиваю систему контроля, провожу тренинги для команды.
+            При необходимости помогаю запустить стратегию в работу: адаптирую формат планерок, настраиваю систему контроля, провожу тренинги для команды и руководителей.
           </p>
         </div>
       </div>
@@ -396,7 +396,7 @@ permalink: /strategic/
 <section style="padding: var(--spacing-lg) 0; background-color: var(--color-background);">
   <div class="container">
     <p style="color: var(--color-dark-text); line-height: 1.7;">
-      <span class="special-case-heading" style="color: var(--color-1-primary);">Вызов:</span> Дирекция ООПТ Санкт-Петербурга — прогрессивное казённое учреждение с молодым коллективом, сформированным после реструктуризации. Все сотрудники — сильные специалисты, но каждый работал в своём направлении. Отсутствовал общий язык и ясное понимание целей, что приводило к выгоранию и потере смысла в работе. Противоречия между задачами охраны природы и развития туризма блокировали возможность содержательных стратегических обсуждений.
+      <span class="special-case-heading" style="color: var(--color-1-primary);">Вызов:</span> Дирекция ООПТ Санкт-Петербурга — прогрессивное казённое учреждение с молодым коллективом, сформированным после реструктуризации. Все сотрудники — сильные специалисты, но каждый работал в своём направлении. Противоречия между задачами охраны природы и развития туризма являлись предметов дискуссий и даже споров.
     </p>
   </div>
 </section>
@@ -423,11 +423,11 @@ permalink: /strategic/
     <ul style="color: var(--color-dark-text); line-height: 1.8; list-style: none; padding: 0;">
       <li style="margin-bottom: var(--spacing-sm); padding-left: var(--spacing-lg); position: relative;">
         <span style="position: absolute; left: 0; color: var(--color-accent); font-weight: 700;">✓</span>
-        Появилась настоящая команда с сформулированными ценностями, общим видением и языком.
+        Появилась команда с сформулированными ценностями, общим видением и языком.
       </li>
       <li style="margin-bottom: var(--spacing-sm); padding-left: var(--spacing-lg); position: relative;">
         <span style="position: absolute; left: 0; color: var(--color-accent); font-weight: 700;">✓</span>
-        Был снят ключевой конфликт непонимания — баланс между охраной и использованием территории нашла сама команда.
+        Команда нашла баланс между охраной природы и использованием территорий.
       </li>
       <li style="margin-bottom: var(--spacing-sm); padding-left: var(--spacing-lg); position: relative;">
         <span style="position: absolute; left: 0; color: var(--color-accent); font-weight: 700;">✓</span>
@@ -457,7 +457,7 @@ permalink: /strategic/
       Стратегии, которые меняют реальность: проекты с бизнесом и регионами
     </h2>
     <p style="text-align: center; font-size: var(--font-size-lg); opacity: 0.8; margin-bottom: 50px; max-width: 900px; margin-left: auto; margin-right: auto;">
-      Как я создавал рабочие стратегии для организаций, где сталкивались интересы экологии, бизнеса и местных сообществ. Каждый кейс — это пример преодоления разобщенности через вовлечение всех стейкхолдеров в процесс планирования.
+      Реальные стратегии для организаций, где сталкивались интересы экологии, бизнеса и местных сообществ. Каждый кейс — это пример преодоления разобщенности через вовлечение всех стейкхолдеров в процесс планирования.
     </p>
     
     <div class="grid grid-3" style="gap: var(--spacing-md);">
@@ -573,7 +573,7 @@ permalink: /strategic/
       </ul>
       
         <p style="color: var(--color-dark-text); margin-top: var(--spacing-md); font-style: italic; border-left: 4px solid var(--color-1-secondary); padding-left: var(--spacing-md);">
-        <strong style="color: var(--color-1-primary);">Честно о главном:</strong> Я не создаю «волшебные таблетки». Я даю вашей команде инструменты и алгоритмы, которые работают. Но чтобы они заработали, их нужно применять. Моя задача — максимально облегчить этот старт и поддержать на первых этапах.
+        <strong style="color: var(--color-1-primary);">Честно о главном:</strong> Я не волшебник: стратегия работает, только если команда ее применяет, а руководитель заинтересован в изменениях. Я даю вам инструменты и алгоритмы, которые работают. Моя задача — максимально облегчить этот старт и поддержать на первых этапах.
       </p>
     </div>
   </div>
@@ -588,7 +588,7 @@ permalink: /strategic/
     <p style="font-size: var(--font-size-lg); margin-bottom: var(--spacing-lg); opacity: 0.9; line-height: 1.8;">
       Забронируйте консультацию. Вместе проанализируем Вашу ситуацию и разработаем план первых шагов по созданию стратегии, которую поддержит вся Ваша команда. Вы получите конкретные рекомендации и понимание сроков, бюджета и ожидаемых результатов. Консультация ни к чему не обязывает, но может стать первым шагом к управлению без «пожаров».
     </p>
-    <a href="mailto:ymike@mail.ru" class="btn btn-primary" style="font-size: var(--font-size-lg); padding: var(--spacing-md) var(--spacing-xl);">
+    <a href="#consult-modal" class="btn btn-primary js-open-consult-modal" style="font-size: var(--font-size-lg); padding: var(--spacing-md) var(--spacing-xl);">
       Записаться на консультацию
     </a>
   </div>
