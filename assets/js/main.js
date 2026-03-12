@@ -102,6 +102,38 @@ window.addEventListener('load', function() {
   }
 });
 
+// Сохранение позиции прокрутки при переключении языка
+(function () {
+  // --- Сохранение перед уходом со страницы ---
+  document.addEventListener('DOMContentLoaded', function () {
+    var langBtns = document.querySelectorAll('.lang-switcher .lang-btn');
+    langBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (btn.classList.contains('active')) return; // уже на этом языке
+        var totalH = document.documentElement.scrollHeight - window.innerHeight;
+        var pct = totalH > 0 ? window.scrollY / totalH : 0;
+        sessionStorage.setItem('langSwitchScrollPct', pct);
+      });
+    });
+  });
+
+  // --- Восстановление после загрузки ---
+  window.addEventListener('load', function () {
+    var pct = sessionStorage.getItem('langSwitchScrollPct');
+    if (pct !== null) {
+      sessionStorage.removeItem('langSwitchScrollPct');
+      var totalH = document.documentElement.scrollHeight - window.innerHeight;
+      if (totalH > 0) {
+        // behavior: 'instant' — гарантированно мгновенный прыжок,
+        // игнорирует scroll-behavior: smooth из CSS и настроек браузера
+        window.scrollTo({ top: Math.round(parseFloat(pct) * totalH), left: 0, behavior: 'instant' });
+      }
+      // Показываем страницу после прокрутки — синхронно, в том же кадре
+      document.documentElement.style.visibility = '';
+    }
+  });
+})();
+
 // Модальное окно записи на консультацию (Getform)
 document.addEventListener('DOMContentLoaded', () => {
   const consultOverlay = document.getElementById('consult-modal-overlay');

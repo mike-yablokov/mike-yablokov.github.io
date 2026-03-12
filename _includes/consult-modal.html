@@ -11,10 +11,14 @@
     <div class="modal-content">
       <div class="consult-modal-inner" style="padding: var(--spacing-md) var(--spacing-xl) var(--spacing-xl) var(--spacing-xl);">
         <h1 style="color: var(--color-m-primary); margin-top: 0; margin-bottom: var(--spacing-md); font-size: var(--font-size-3xl);">
-          Записаться на консультацию
+          {% if page.url contains '/en/' %}Book a Consultation{% else %}Записаться на консультацию{% endif %}
         </h1>
         <p style="color: var(--color-dark-text); margin-bottom: var(--spacing-lg); line-height: 1.7;">
-          Укажите ниже Ваше имя, почту и вопрос, который вы хотели бы обсудить.
+          {% if page.url contains '/en/' %}
+            Please provide your name, email, and the topic you'd like to discuss below.
+          {% else %}
+            Укажите ниже Ваше имя, почту и вопрос, который вы хотели бы обсудить.
+          {% endif %}
         </p>
         <script src="https://forms.yandex.ru/_static/embed.js"></script>
         <iframe

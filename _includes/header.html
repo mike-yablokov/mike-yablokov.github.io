@@ -1,30 +1,37 @@
-{% assign nav_base = '' %}
-{% if page.url contains '/en/' %}
-  {% assign nav_base = '/en' %}
-{% endif %}
-
 <header class="header">
   <div class="header-content">
     <!-- Логотип / Имя -->
-    <a href="{{ '/' | relative_url }}" class="logo">Михаил Яблоков</a>
+    <a href="{{ nav_base | default: '' | append: '/' | relative_url }}" class="logo">
+      {% if page.url contains '/en/' %}Mikhail Yablokov{% else %}Михаил Яблоков{% endif %}
+    </a>
     
     <!-- Навигация -->
     <nav class="nav" aria-label="Основная навигация">
       <ul class="nav-list">
         <li class="nav-item">
-          <a href="{{ nav_base | append: '/strategic/' | relative_url }}" class="nav-link">Стратегии<br>устойчивости</a>
+          <a href="{{ nav_base | append: '/strategic/' | relative_url }}" class="nav-link">
+            {% if page.url contains '/en/' %}Strategic<br>Solutions{% else %}Стратегии<br>устойчивости{% endif %}
+          </a>
         </li>
         <li class="nav-item">
-          <a href="{{ nav_base | append: '/social/' | relative_url }}" class="nav-link">Социальные<br>решения</a>
+          <a href="{{ nav_base | append: '/social/' | relative_url }}" class="nav-link">
+            {% if page.url contains '/en/' %}Social<br>Solutions{% else %}Социальные<br>решения{% endif %}
+          </a>
         </li>
         <li class="nav-item">
-          <a href="{{ nav_base | append: '/tourism/' | relative_url }}" class="nav-link">Природный<br>туризм</a>
+          <a href="{{ nav_base | append: '/tourism/' | relative_url }}" class="nav-link">
+            {% if page.url contains '/en/' %}Nature<br>Tourism{% else %}Природный<br>туризм{% endif %}
+          </a>
         </li>
         <li class="nav-item">
-          <a href="{{ nav_base | append: '/digital/' | relative_url }}" class="nav-link">Цифровые<br>решения</a>
+          <a href="{{ nav_base | append: '/digital/' | relative_url }}" class="nav-link">
+            {% if page.url contains '/en/' %}Digital<br>Solutions{% else %}Цифровые<br>решения{% endif %}
+          </a>
         </li>
         <li class="nav-item">
-          <a href="{{ nav_base | append: '/education/' | relative_url }}" class="nav-link">Развитие<br>команд</a>
+          <a href="{{ nav_base | append: '/education/' | relative_url }}" class="nav-link">
+            {% if page.url contains '/en/' %}Team<br>Development{% else %}Развитие<br>команд{% endif %}
+          </a>
         </li>
       </ul>
     </nav>

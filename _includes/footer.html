@@ -2,12 +2,22 @@
   <div class="footer-content">
     <!-- Левая колонка: О себе + Контакты -->
     <div class="footer-section footer-about">
-      <h3 class="footer-title"><a href="{{ '/' | relative_url }}" class="footer-title-link">Михаил Яблоков</a></h3>
+      <h3 class="footer-title">
+        <a href="{{ nav_base | default: '' | append: '/' | relative_url }}" class="footer-title-link">
+          {% if page.url contains '/en/' %}Mikhail Yablokov{% else %}Михаил Яблоков{% endif %}
+        </a>
+      </h3>
       <p class="footer-text">
-        Эксперт по территориальной охране природы, стратегическому планированию, развитию природного туризма и социальным решениям. <a href="{{ '/pdfs/ruYablokovCV.pdf' | relative_url }}" target="_blank" class="footer-link-inline"> Скачать резюме.</a>
+        {% if page.url contains '/en/' %}
+          Expert in territorial nature conservation, strategic planning, sustainable tourism development, and social solutions.
+          <a href="{{ '/pdfs/enYablokovCV.pdf' | relative_url }}" target="_blank" class="footer-link-inline"> Download CV.</a>
+        {% else %}
+          Эксперт по территориальной охране природы, стратегическому планированию, развитию природного туризма и социальным решениям.
+          <a href="{{ '/pdfs/ruYablokovCV.pdf' | relative_url }}" target="_blank" class="footer-link-inline"> Скачать резюме.</a>
+        {% endif %}
       </p>
       
-      <h4 class="footer-contacts-title">Контакты:</h4>
+      <h4 class="footer-contacts-title">{% if page.url contains '/en/' %}Contacts:{% else %}Контакты:{% endif %}</h4>
       <div class="footer-contacts">
         <div class="footer-contact-row">
           <div class="footer-contact-item" id="footer-phone"></div>
@@ -40,19 +50,29 @@
     
     <!-- Правая колонка: Навигация -->
     <div class="footer-section footer-nav">
-      <h4 class="footer-title"><a href="{{ '/' | relative_url }}" class="footer-title-link">Направления</a></h4>
+      <h4 class="footer-title">
+        <a href="{{ nav_base | default: '' | append: '/' | relative_url }}" class="footer-title-link">
+          {% if page.url contains '/en/' %}Areas of Expertise{% else %}Направления{% endif %}
+        </a>
+      </h4>
       <ul class="footer-links">
-        <li><a href="{{ '/strategic/' | relative_url }}">Стратегии устойчивости</a></li>
-        <li><a href="{{ '/social/' | relative_url }}">Социальные решения для территорий</a></li>
-        <li><a href="{{ '/tourism/' | relative_url }}">Устойчивый природный туризм</a></li>
-        <li><a href="{{ '/digital/' | relative_url }}">Цифровые решения для территорий</a></li>
-        <li><a href="{{ '/education/' | relative_url }}">Обучение и развитие команд</a></li>
+        <li><a href="{{ nav_base | append: '/strategic/' | relative_url }}">{% if page.url contains '/en/' %}Strategic Solutions{% else %}Стратегии устойчивости{% endif %}</a></li>
+        <li><a href="{{ nav_base | append: '/social/' | relative_url }}">{% if page.url contains '/en/' %}Social Solutions for Territories{% else %}Социальные решения для территорий{% endif %}</a></li>
+        <li><a href="{{ nav_base | append: '/tourism/' | relative_url }}">{% if page.url contains '/en/' %}Sustainable Nature Tourism{% else %}Устойчивый природный туризм{% endif %}</a></li>
+        <li><a href="{{ nav_base | append: '/digital/' | relative_url }}">{% if page.url contains '/en/' %}Digital Solutions for Territories{% else %}Цифровые решения для территорий{% endif %}</a></li>
+        <li><a href="{{ nav_base | append: '/education/' | relative_url }}">{% if page.url contains '/en/' %}Team Development and Education{% else %}Обучение и развитие команд{% endif %}</a></li>
       </ul>
     </div>
   </div>
   
   <div class="footer-copyright">
-    <p>&copy; 2026 Михаил Яблоков. Все права защищены.</p>
+    <p>
+      {% if page.url contains '/en/' %}
+        &copy; 2026 Mikhail Yablokov. All rights reserved.
+      {% else %}
+        &copy; 2026 Михаил Яблоков. Все права защищены.
+      {% endif %}
+    </p>
   </div>
 </footer>
 

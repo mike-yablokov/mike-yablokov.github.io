@@ -11,7 +11,11 @@
   function openModal(caseId) {
     const caseData = window.modalCasesData && window.modalCasesData[caseId];
     if (!caseData) {
-      console.warn('Кейс не найден:', caseId);
+      if (window.currentLang === 'en') {
+        console.warn('Case not found:', caseId);
+      } else {
+        console.warn('Кейс не найден:', caseId);
+      }
       return;
     }
     
@@ -56,7 +60,11 @@
         } else {
           // Для секции additional - заголовок "Ссылки:"
           if (section.type === 'additional') {
-            html += '<h2>Ссылки:</h2>';
+            if (window.currentLang === 'en') {
+              html += '<h2>Links:</h2>';
+            } else {
+              html += '<h2>Ссылки:</h2>';
+            }
           } else if (section.title) {
             // Для остальных секций - обычный заголовок
             html += `<h2>${escapeHtml(section.title)}</h2>`;
@@ -81,8 +89,13 @@
           let linkText = link.text;
           
           // Заменяем "Док:" на "Структура документа:"
-          linkText = linkText.replace(/^Док:\s*/i, 'Структура документа: ');
-          linkText = linkText.replace(/^док:\s*/i, 'Структура документа: ');
+          if (window.currentLang === 'en') {
+            linkText = linkText.replace(/^Doc:\s*/i, 'Document structure: ');
+            linkText = linkText.replace(/^док:\s*/i, 'Document structure: '); // backup for russian prefix in EN file if forgotten
+          } else {
+            linkText = linkText.replace(/^Док:\s*/i, 'Структура документа: ');
+            linkText = linkText.replace(/^док:\s*/i, 'Структура документа: ');
+          }
           
           // Оставляем оригинальный текст для внешних ссылок (уже есть точные описания)
           

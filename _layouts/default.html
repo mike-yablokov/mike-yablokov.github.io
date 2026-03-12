@@ -1,5 +1,10 @@
+{% assign nav_base = '' %}
+{% if page.url contains '/en/' %}
+  {% assign nav_base = '/en' %}
+{% endif %}
+
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="{% if page.url contains '/en/' %}en{% else %}ru{% endif %}">
 <head>
   {% include head.html %}
 </head>
