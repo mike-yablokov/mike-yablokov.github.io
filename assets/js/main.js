@@ -147,6 +147,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const openConsultModal = () => {
     consultOverlay.style.display = 'flex';
     document.body.style.overflow = 'hidden';
+    
+    // Отправка цели в Яндекс.Метрику
+    if (typeof ym !== 'undefined') {
+      ym(92922877, 'reachGoal', 'open_form');
+    }
   };
 
   const closeConsultModal = () => {
