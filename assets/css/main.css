@@ -339,6 +339,13 @@ a:focus {
   h2 {
     font-size: var(--font-size-2xl);
   }
+
+  /* Исправление размера шрифта в фото-секциях для планшетов */
+  .quote-section blockquote,
+  .quote-section h3 {
+    font-size: 1.375rem !important; /* 22px при базе 16px (или ~23px при базе 17px) */
+    line-height: 1.5 !important;
+  }
 }
 
 /* Mobile (до 768px) */
@@ -379,6 +386,13 @@ a:focus {
   .btn {
     width: 100%;
     display: block;
+  }
+
+  /* Исправление размера шрифта в фото-секциях (цитаты) */
+  .quote-section blockquote,
+  .quote-section h3 {
+    font-size: 1.125rem !important; /* 18px при базе 16px */
+    line-height: 1.5 !important;
   }
 }
 
