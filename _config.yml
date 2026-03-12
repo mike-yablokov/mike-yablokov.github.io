@@ -10,6 +10,13 @@ baseurl: ""
 # ID счётчика Яндекс.Метрики (задайте реальный ID в будущем)
 metrika_id: "92922877"
 
+# OG-изображение по умолчанию (hero-фото главной)
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/hero/ymike.ru_0.1-1920w.jpg
+
 # Build настройки
 markdown: kramdown
 permalink: pretty  # Красивые URL без .html

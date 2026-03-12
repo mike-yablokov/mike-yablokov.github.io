@@ -32,6 +32,19 @@ if ('scrollRestoration' in history) {
 <!-- SEO плагин Jekyll -->
 {% seo %}
 
+<!-- hreflang для двуязычного сайта -->
+{% if page.url contains '/en/' %}
+  {% assign ru_url = page.url | remove: '/en' %}
+  <link rel="alternate" hreflang="ru" href="{{ site.url }}{{ ru_url }}" />
+  <link rel="alternate" hreflang="en" href="{{ site.url }}{{ page.url }}" />
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ ru_url }}" />
+{% else %}
+  {% assign en_url = '/en' | append: page.url %}
+  <link rel="alternate" hreflang="ru" href="{{ site.url }}{{ page.url }}" />
+  <link rel="alternate" hreflang="en" href="{{ site.url }}{{ en_url }}" />
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ page.url }}" />
+{% endif %}
+
 {% if site.metrika_id and site.metrika_id != "" %}
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">

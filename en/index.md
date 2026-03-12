@@ -1,7 +1,7 @@
 ---
 layout: home
 title: "Mikhail Yablokov - Expert in Territorial Nature Conservation"
-description: "Turning Conflicts into Partnerships, Strategies into Working Tools"
+description: "Mikhail Yablokov — Consultant for ESG & Protected Areas. Implementing sustainable tourism, social research, facilitation and digital tools for business and regions."
 permalink: /en/
 ---
 
@@ -159,10 +159,10 @@ permalink: /en/
       <div style="background: var(--color-add-bg); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-m-secondary); grid-column: 1 / -1;">
         <h3 style="color: var(--color-m-primary); margin-bottom: var(--spacing-sm);">Recognition in the Professional Community:</h3>
         <ul style="color: var(--color-dark-text); line-height: 1.5; list-style-position: outside; padding-left: 20px; margin-bottom: var(--spacing-md);">
-          <li style="margin-bottom: var(--spacing-xs);">Russia Focal Point at IUCN World Commission on Protected Areas (WCPA)</li>
-          <li style="margin-bottom: var(--spacing-xs);">Member of the Expert Council on Protected Area Management</li>
-          <li style="margin-bottom: var(--spacing-xs);">Board Member of the "Association of Protected Area Employees"</li>
-          <li>Coordinator of the Association of Nature Reserves and Parks of the North-West Region</li>
+          <li style="margin-bottom: var(--spacing-xs);"><a href="https://iucn.org/our-union/commissions/iucn-world-commission-protected-areas-2021-2025" target="_blank" rel="noopener noreferrer" style="color: var(--color-m-secondary);">Russia Focal Point at IUCN World Commission on Protected Areas (WCPA)</a></li>
+          <li style="margin-bottom: var(--spacing-xs);"><a href="https://zapovedcouncil.ru/" target="_blank" rel="noopener noreferrer" style="color: var(--color-m-secondary);">Member of the Expert Council on Protected Area Management</a></li>
+          <li style="margin-bottom: var(--spacing-xs);"><a href="https://xn--80aaxb1adailas5bc1k.xn--p1ai/#rec707932688" target="_blank" rel="noopener noreferrer" style="color: var(--color-m-secondary);">Board Member of the "Association of Protected Area Employees"</a></li>
+          <li><a href="https://aoopt.ru/#contacts" target="_blank" rel="noopener noreferrer" style="color: var(--color-m-secondary);">Coordinator of the Association of Nature Reserves and Parks of the North-West Region</a></li>
         </ul>
         <div style="text-align: right;">
           <a href="{{ '/pdfs/enYablokovCV.pdf' | relative_url }}" target="_blank" class="btn btn-secondary" style="display: inline-block;">

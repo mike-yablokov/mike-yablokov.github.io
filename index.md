@@ -1,7 +1,7 @@
 ---
 layout: home
 title: "Михаил Яблоков - Эксперт по территориальной охране природы"
-description: "Переводим конфликты в партнёрство, а стратегии — в работающие инструменты"
+description: "Михаил Яблоков — эксперт по управлению природными территориями и ESG-стратегиям. Устойчивый туризм, фасилитация, социологические исследования, цифровизация ООПТ."
 permalink: /
 ---
 
@@ -159,10 +159,10 @@ permalink: /
       <div style="background: var(--color-add-bg); padding: var(--spacing-lg); border-radius: var(--radius-lg); border-left: 4px solid var(--color-m-secondary); grid-column: 1 / -1;">
         <h3 style="color: var(--color-m-primary); margin-bottom: var(--spacing-sm);">Признание в профессиональном сообществе:</h3>
         <ul style="color: var(--color-dark-text); line-height: 1.5; list-style-position: outside; padding-left: 20px; margin-bottom: var(--spacing-md);">
-          <li style="margin-bottom: var(--spacing-xs);">Координатор от России во Всемирной Комиссии по ООПТ МСОП (WCPA IUCN Focal Point)</li>
-          <li style="margin-bottom: var(--spacing-xs);">Член Экспертного совета по заповедному делу</li>
-          <li style="margin-bottom: var(--spacing-xs);">Член управляющего совета «Ассоциация работников заповедного дела»</li>
-          <li>Координатор Ассоциации заповедников и парков Северо-Западного региона</li>
+          <li style="margin-bottom: var(--spacing-xs);"><a href="https://iucn.org/our-union/commissions/iucn-world-commission-protected-areas-2021-2025" target="_blank" rel="noopener noreferrer" style="color: var(--color-m-secondary);">Координатор от России во Всемирной Комиссии по ООПТ МСОП (WCPA IUCN Focal Point)</a></li>
+          <li style="margin-bottom: var(--spacing-xs);"><a href="https://zapovedcouncil.ru/" target="_blank" rel="noopener noreferrer" style="color: var(--color-m-secondary);">Член Экспертного совета по заповедному делу</a></li>
+          <li style="margin-bottom: var(--spacing-xs);"><a href="https://xn--80aaxb1adailas5bc1k.xn--p1ai/#rec707932688" target="_blank" rel="noopener noreferrer" style="color: var(--color-m-secondary);">Член управляющего совета «Ассоциация работников заповедного дела»</a></li>
+          <li><a href="https://aoopt.ru/#contacts" target="_blank" rel="noopener noreferrer" style="color: var(--color-m-secondary);">Координатор Ассоциации заповедников и парков Северо-Западного региона</a></li>
         </ul>
         <div style="text-align: right;">
           <a href="{{ '/pdfs/ruYablokovCV.pdf' | relative_url }}" target="_blank" class="btn btn-secondary" style="display: inline-block;">
